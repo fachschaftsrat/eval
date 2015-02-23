@@ -1,4 +1,4 @@
-% Copyright Stephan Kuschel, 2009
+% Copyright Stephan Kuschel, 2009,2010
 
 \documentclass[a4paper, parskip=half, numbers=noenddot, ngerman, fleqn, 10pt]{scrartcl}
 \usepackage{babel}
@@ -21,7 +21,7 @@
 %\usepackage{marvosym, mathrsfs} %Stop-Symbol für \todo
 %\usepackage{amsmath, amsfonts, amssymb, amsthm, bbm}
 \usepackage[a4paper, inner=20mm, outer=16mm, top=14mm, headsep=5mm, marginparsep=0mm, marginpar=16mm, bottom=17mm, foot=7mm]{geometry} %Option twoside
-%\usepackage{hyperref}
+\usepackage{hyperref}
 
 
 %Kopfzeile neu definieren
@@ -31,9 +31,9 @@
 \clearscrheadfoot
 %\cfoot{\small\Veranstaltung , \Lesender , \Semester}
 %\ohead{Vorlesung}
-\ofoot{\small \getULENummer}
+\ofoot{\scriptsize \getNummern}
 \ihead{\small Evaluation des Fachschaftsrates der Physikalisch-Astronomischen-Fakultät, FSU Jena}
-\ohead{\small fsr@paf.uni-jena.de}
+\ohead{\small \href{http://www.fsr.uni-jena.de}{www.fsr.uni-jena.de}}
 %\setheadwidth[0mm]{\textwidth}
 
 %Aussehen
@@ -51,7 +51,7 @@
 %Zugriff auf Auswertungstexte
 \newcounter{Fragenum}
 \newcommand{\fragetext}{
-	\addtocounter{Fragenum}{1}
+	\addtocounter{Fragenum}{1} \arabic{Fragenum}. 
 	\expandafter\csname \VoderU item\roman{Fragenum}\endcsname}
 %\newcommand{\fragezuruck}{\addtocounter{Fragenum}{-1}}
 %Befehl für die Formatierung der Bewertungen
@@ -65,8 +65,8 @@
 \newcommand{\Vitemiii}{Stunden/Woche Selbststudium\\(alle Veranstaltungen):}
 \newcommand{\Vitemiv}{Stunden/Woche Selbststudium\\(diese Veranstaltung):}
 \newcommand{\Vitemv}{Wie empfindest du den von dir erbrachten Arbeitsaufwand?} \newcommand{\Vbewertungv}{\bewertung{zu niedrig}{zu hoch}}
-\newcommand{\Vitemvi}{Wie erhöht die Vorlesung dein Interesse am Thema?} \newcommand{\Vbewertungvi}{\bewertung{wenig}{viel}}
-\newcommand{\Vitemvii}{Wie empfindest du das fachliche Niveau?} \newcommand{\Vbewertungvii}{\bewertung{zu niedrig}{zu hoch}}
+\newcommand{\Vitemvi}{Wie empfindest du das fachliche Niveau?} \newcommand{\Vbewertungvi}{\bewertung{zu niedrig}{zu hoch}}
+\newcommand{\Vitemvii}{Wie erhöht die Vorlesung dein Interesse am Thema?} \newcommand{\Vbewertungvii}{\bewertung{wenig}{viel}}
 \newcommand{\Vitemviii}{Knüpft der Stoff an deinen bisherigen Wissensstand an?} \newcommand{\Vbewertungviii}{\bewertung{kaum}{meist}}
 \newcommand{\Vitemix}{Steht hilfreiche Begleitliteratur zur Verfügung?} \newcommand{\Vbewertungix}{\bewertung{wenig}{viel}}
 \newcommand{\Vitemx}{Wie hilfreich findest du das Skript?} \newcommand{\Vbewertungx}{\bewertung{wenig}{viel}}
@@ -99,9 +99,9 @@ Aufgaben ein?} \newcommand{\Vbewertungxxvi}{\bewertung{zu niedrig}{zu hoch}}
 \newcommand{\Uitemii}{\Vitemii}
 \newcommand{\Uitemiii}{Wie schätzt du den Arbeitsaufwand für das
 Lösen der Übungsaufgaben ein?}\newcommand{\Ubewertungiii}{\bewertung{zu niedrig}{zu hoch}}
-\newcommand{\Uitemiv}{Wie empfindest du die Gruppenstärke?}\newcommand{\Ubewertungiv}{\bewertung{zu groß}{angemessen}}
-\newcommand{\Uitemv}{Wie erhöht die Übung dein Interesse am
-Thema?} \newcommand{\Ubewertungv}{\bewertung{wenig}{viel}}
+\newcommand{\Uitemiv}{Wie erhöht die Übung dein Interesse am
+Thema?} \newcommand{\Ubewertungiv}{\bewertung{wenig}{viel}}
+\newcommand{\Uitemv}{Wie empfindest du die Gruppenstärke?}\newcommand{\Ubewertungv}{\bewertung{zu groß}{angemessen}}
 \newcommand{\Uitemvi}{Wie empfindest du das fachliche Niveau?}\newcommand{\Ubewertungvi}{\bewertung{zu niedrig}{zu hoch}}
 \newcommand{\Uitemvii}{Knüpft der Stoff an die Vorlesung an?} \newcommand{\Ubewertungvii}{\bewertung{kaum}{meist}}
 \newcommand{\Uitemviii}{Funktioniert die Abstimmung zwischen dem
@@ -200,13 +200,13 @@ der Übung?}\newcommand{\Ubewertungxxv}{\bewertung{zu wenig}{angemessen}}
 \newcommand{\getLesender}[1]{}
 \newcommand{\getSemester}[1]{}
 \newcommand{\getUbungsleiter}[1]{}
-\newcommand{\getULENummer}[1]{}
+\newcommand{\getNummern}[1]{}
 
 \newcommand{\Veranstaltung}[1]{\renewcommand{\getVeranstaltung}{#1\xspace}}
 \newcommand{\Lesender}[1]{\renewcommand{\getLesender}{#1\xspace}}
 \newcommand{\Semester}[1]{\renewcommand{\getSemester}{#1\xspace}}
 \newcommand{\Ubungsleiter}[1]{\renewcommand{\getUbungsleiter}{#1\xspace}}
-\newcommand{\ULENummer}[1]{\renewcommand{\getULENummer}{#1\xspace}}
+\newcommand{\PafUleNummern}[2]{\renewcommand{\getNummern}{PAF: #1 \quad ULE: #2\xspace}}
 %\newcommand{\AnzahlStudenten}[1]{\newcommand{\getAnzahlStudenten}{#1\xspace}}
 
 \newcommand{\VoderU}{}
@@ -269,7 +269,7 @@ der Übung?}\newcommand{\Ubewertungxxv}{\bewertung{zu wenig}{angemessen}}
 
 %Freitextantworten
 \newenvironment{freitextantworten}{\\[1ex minus 7pt]
-\textsf{\textbf{Freitextantworten}} \vspace{0pt minus 5pt}
+\textsf{\textbf{Freitextantworten}} \ifthenelse{\boolean{freitextkurz}}{\\ (einzelne Freitextantworten wurden nicht berücksichtigt)}{} \vspace{0pt minus 5pt}
 \begin{itemize} \setlength{\itemsep}{-4pt minus 5pt}
 }{
 \ifthenelse{\boolean{freitextda}}{}{\item[$-$] \textit{keine Freitextantworten} $-$}
@@ -278,27 +278,32 @@ der Übung?}\newcommand{\Ubewertungxxv}{\bewertung{zu wenig}{angemessen}}
 }
 
 %Freitextantworten:
-\newboolean{freitextda} \setboolean{freitextda}{false}
-\newboolean{freitextkurz} \setboolean{freitextkurz}{false}
+\newboolean{freitextda} \setboolean{freitextda}{false} %mindestens eine Freitextantwort da
+\newboolean{freitextkurz} \setboolean{freitextkurz}{false} %Freitextantworten von nur einer Person hinschreiben?
 \newcommand{\ftgsetzen}[2][\relax]{\setboolean{freitextda}{true}\item[$+$] #2 \ifx#1\relax \else\hfill(#1)\fi}
 \newcommand{\ftssetzen}[2][\relax]{\setboolean{freitextda}{true}\item[$-$] #2 \ifx#1\relax \else\hfill(#1)\fi}
 
-%gut:
+%gut: \ftg[anzahl]{text}
 \newcommand{\ftg}[2][\relax]{
 \ifthenelse{\boolean{freitextkurz}}
 {\ifx#1\relax \else\ftgsetzen[#1]{#2}\fi}
 {\ftgsetzen[#1]{#2}}
 }
-%schlecht:
+%schlecht: \fts[anzahl]{text}
 \newcommand{\fts}[2][\relax]{
 \ifthenelse{\boolean{freitextkurz}}
 {\ifx#1\relax \else\ftssetzen[#1]{#2}\fi}
 {\ftssetzen[#1]{#2}}
 }
 
+%Zeigt an, dass Freitextantworten vergessen wurden
+\newcommand{\freitextvergessen}{\item \large \textbf{\fbox{\textcolor{red}{\underline{Freitextantworten vergessen!}}}}}
 %ausführen, um Freitextantworten, die nur ein Student geschrieben hat ausszuschließen
 \newcommand{\freitextbeschneiden}{\setboolean{freitextkurz}{true}}
 %\freitextbeschneiden
+
+\newcommand{\englischeEval}{\cfoot{\fbox{Evaluation of english speaking students}}}
+
 
 
 %Textkörper beginnen

@@ -1,11 +1,13 @@
-% Copyright Stephan Kuschel, 2009
+% Copyright Stephan Kuschel, 2009,2010
 
 \input{Kopf.tex}
 \Veranstaltung{Atombomben mit dem Taschenmesser III}
 \Lesender{MacGyver}
 \Semester{SS2009}
 \Ubungsleiter{Chuck Norris}
-\ULENummer{23}
+\PafUleNummern{23}{77}
+\freitextbeschneiden
+\englischeEval
 
 %\maketitleU
 %\mundsdplot{3}{1.3}{1}
@@ -20,13 +22,13 @@
 %testtext
 %\fbox{\parbox{\columnwidth}{test}}
 %\minisec{Auswertung der Evaluationsfragen}
-\maketitleV
+\maketitleU
 \AnzahlStudentenAuswertung{22}
 \MSDAuswertung{5}{1.3}
 \Kreuzauswertung{0}{.8}{.2}{.6}{.5}{0.1}{3.4}
 \MSDAuswertung{5}{1.3}
 \MSDAuswertung{5}{1.3}
-\Kreuzauswertung{0}{.8}{.2}{.6}{.5}{0.1}{3.4}
+\Kreuzauswertung{0}{.1}{.2}{.6}{.5}{0.1}{3.4}
 \Kreuzauswertung{0}{.8}{.2}{.6}{.5}{0.1}{3.4}
 \Kreuzauswertung{0}{.8}{.2}{.6}{.5}{0.1}{3.4}
 \Kreuzauswertung{0}{.8}{.2}{.6}{.5}{0.1}{3.4}
@@ -50,10 +52,9 @@
 \Kreuzauswertung{0}{.8}{.2}{.6}{.5}{0.1}{3.4}
 %\vspace{-10mm}
 \begin{freitextantworten}
-\InputIfFileExists{freitextantworten/V71.tex}{}{}
+\InputIfFileExists{freitextantworten/V71.tex}{}{\freitextvergessen}
 %\InputIfFileExists{freitextantworten/V71.tex}{}{}
 %\InputIfFileExists{freitextantworten/V72.tex}{}{}
 \end{freitextantworten}
-
 \end{multicols}
 \end{document}
