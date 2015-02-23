@@ -1,0 +1,75 @@
+% Copyright Stephan Kuschel, 2009
+
+\documentclass[a4paper, parskip=half, numbers=noenddot, ngerman, fleqn, 10pt]{scrartcl}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{lmodern}
+%\usepackage{booktabs} 
+%\usepackage{graphicx}
+%\usepackage{xcolor}
+%\usepackage{array}
+%\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{multicol}
+%\usepackage{calc}
+\usepackage{xifthen} %Boolsche Variablen
+%\usepackage{marvosym, mathrsfs} %Stop-Symbol für \todo
+%\usepackage{amsmath, amsfonts, amssymb, amsthm, bbm}
+\usepackage{wasysym}
+\usepackage[a4paper, inner=20mm, outer=16mm, top=14mm, headsep=5mm, marginparsep=0mm, marginpar=16mm, bottom=17mm, foot=7mm]{geometry} %Option twoside
+%\usepackage{hyperref}
+
+
+%Kopfzeile neu definieren
+\usepackage[headsepline]{scrpage2} %Option headsepline für linie
+\pagestyle{scrheadings}
+\automark{section}
+\clearscrheadfoot
+%\cfoot{\small\Veranstaltung , \Lesender , \Semester}
+%\ohead{Vorlesung}
+%\ofoot{\small \getULENummer}
+\ihead{\small Evaluation des Fachschaftsrates der Physikalisch-Astronomischen-Fakultät, FSU Jena}
+\ohead{\small fsr@paf.uni-jena.de}
+%\setheadwidth[0mm]{\textwidth}
+
+%Aussehen
+\sloppy
+\columnseprule=0.4pt %Linienstärke der die Spalten teilenden Linie
+%Spalten nicht "ausbalancieren"
+\makeatletter\let\balance@columns@out\multi@column@out\makeatother
+
+
+
+%Freitextantworten
+\newenvironment{freitextantworten}{
+\textsf{\textbf{Freitextantworten}} \vspace{0pt minus 5pt}
+\begin{itemize} \setlength{\itemsep}{-4pt minus 5pt}
+}{
+\ifthenelse{\boolean{freitextda}}{}{\item[$-$] \textit{keine Freitextantworten} $-$}
+\end{itemize}\vfill
+%\smash{\parbox[c]{1\columnwidth}{\vspace{2.8em}Einverständnis zum Aushang innerhalb der Universität:}}
+}
+%um Freitext zu setzen, gut
+\newboolean{freitextda} \setboolean{freitextda}{false}
+\newcommand{\ftg}[2][\relax]{\setboolean{freitextda}{true}\item[$+$] #2 \ifx#1\relax \else\hfill(#1)\fi}
+%schlecht
+\newcommand{\fts}[2][\relax]{\setboolean{freitextda}{true}\item[$-$] #2 \ifx#1\relax \else\hfill(#1)\fi}
+
+
+%Textkörper beginnen
+\begin{document}
+\begin{multicols}{2}
+\newcounter{zahl} \setcounter{zahl}{1}
+\begin{freitextantworten}
+\whiledo{\value{zahl} < 74}{
+\item[\RIGHTarrow]{\underline{V\thezahl .tex} \LEFTarrow}
+\InputIfFileExists{V\thezahl .tex}{}{}
+\item[\RIGHTarrow]{\underline{U\thezahl .tex} \LEFTarrow}
+\InputIfFileExists{U\thezahl .tex}{}{}
+\stepcounter{zahl}
+}
+\end{freitextantworten}
+\end{multicols}
+\end{document}
