@@ -1,0 +1,282 @@
+%Copyright Stephan Kuschel, 2010
+
+\documentclass[a4paper, parskip=half, numbers=noenddot, ngerman, fleqn, 10pt]{scrartcl}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{lmodern}
+%\usepackage{booktabs} 
+%\usepackage{graphicx}
+%\usepackage{xcolor}
+%\usepackage{array}
+%\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{xspace}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{xifthen} %Boolsche Variablen
+\usepackage{pgfplots} %Plots in Latex mit TkiZ
+\usetikzlibrary{decorations}
+\usepackage{bbding} %Für die Schere
+%\usepackage{marvosym, mathrsfs} %Stop-Symbol für \todo
+%\usepackage{amsmath, amsfonts, amssymb, amsthm, bbm}
+\usepackage[a4paper, inner=20mm, outer=16mm, top=14mm, headsep=5mm, marginparsep=0mm, marginpar=16mm, bottom=17mm, foot=7mm]{geometry} %Option twoside
+\usepackage{hyperref}
+
+
+%Kopfzeile neu definieren
+\usepackage[headsepline]{scrpage2} %Option headsepline für linie
+\pagestyle{scrheadings}
+\automark{section}
+\clearscrheadfoot
+%\cfoot{\small\Veranstaltung , \Lesender , \Semester}
+%\ohead{Vorlesung}
+\ihead{\small Evaluation des Fachschaftsrates der Physikalisch-Astronomischen-Fakultät, FSU Jena}
+\ohead{\small fsr@paf.uni-jena.de}
+\ofoot{\small SS 2009}
+%\setheadwidth[0mm]{\textwidth}
+
+%Aussehen
+\sloppy
+\columnseprule=0.4pt %Linienstärke der die Spalten teilenden Linie
+%Spalten nicht "ausbalancieren"
+\makeatletter\let\balance@columns@out\multi@column@out\makeatother
+
+\usepackage{ifpdf}
+\ifpdf\else
+\renewcommand{\includegraphics}[2][Bild]{\fbox{#2}}
+\fi
+
+
+%Zugriff auf Auswertungstexte
+\newcounter{Fragenum}
+\newcommand{\fragetext}{
+	\addtocounter{Fragenum}{1}
+	\expandafter\csname \VoderU item\roman{Fragenum}\endcsname}
+%\newcommand{\fragezuruck}{\addtocounter{Fragenum}{-1}}
+%Befehl für die Formatierung der Bewertungen
+\newcommand{\bewertung}[2]{\footnotesize \llap{#1} - \rlap{#2}}
+\newcommand{\bewertungstext}{\expandafter\csname \VoderU bewertung\roman{Fragenum}\endcsname \relax\relax}
+
+%Auswertungstexte zu Vorlesungen
+\newcommand{\Vitemi}{Fachsemester der Studenten:}
+\newcommand{\Vitemii}{An \% der Termine teilgenommen:}
+\newcommand{\Vbewertungii}{\tiny (<20, 20-40, $\cdots$, >80)}
+\newcommand{\Vitemiii}{Stunden/Woche Selbststudium\\(alle Veranstaltungen):}
+\newcommand{\Vitemiv}{Stunden/Woche Selbststudium\\(diese Veranstaltung):}
+\newcommand{\Vitemv}{Wie empfindest du den von dir erbrachten Arbeitsaufwand?} \newcommand{\Vbewertungv}{\bewertung{zu niedrig}{zu hoch}}
+\newcommand{\Vitemvi}{Wie erhöht die Vorlesung dein Interesse am Thema?} \newcommand{\Vbewertungvi}{\bewertung{wenig}{viel}}
+\newcommand{\Vitemvii}{Wie empfindest du das fachliche Niveau?} \newcommand{\Vbewertungvii}{\bewertung{zu niedrig}{zu hoch}}
+\newcommand{\Vitemviii}{Knüpft der Stoff an deinen bisherigen Wissensstand an?} \newcommand{\Vbewertungviii}{\bewertung{kaum}{meist}}
+\newcommand{\Vitemix}{Steht hilfreiche Begleitliteratur zur Verfügung?} \newcommand{\Vbewertungix}{\bewertung{wenig}{viel}}
+\newcommand{\Vitemx}{Wie hilfreich findest du das Skript?} \newcommand{\Vbewertungx}{\bewertung{wenig}{viel}}
+\newcommand{\Vitemxi}{Wie bewertest du die Vorlesungsstruktur des Dozenten?} \newcommand{\Vbewertungxi}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxii}{Wie schätzt du das Tempo der Vorlesung
+ein?} \newcommand{\Vbewertungxii}{\bewertung{zu langsam}{zu schnell}}
+\newcommand{\Vitemxiii}{Bewertung des Tafelbildes:}\newcommand{\Vbewertungxiii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxiv}{Bewertung der Beamerpräsentation:}\newcommand{\Vbewertungxiv}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxv}{Geht der Dozent auf organisatorische Wünsche
+ein? (räumliche und zeitliche Gegebenheiten)}\newcommand{\Vbewertungxv}{\bewertung{selten}{immer}}
+\newcommand{\Vitemxvi}{Steht der Dozent für weitere Rückfragen und
+Hilfestellungen zur Verfügung?}\newcommand{\Vbewertungxvi}{\bewertung{selten}{immer}}
+\newcommand{\Vitemxvii}{Wie vermittelt der Dozent Inhalte?}\newcommand{\Vbewertungxvii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxviii}{Ist der Vorlesungsstil motivierend und lebendig?} \newcommand{\Vbewertungxviii}{\bewertung{wenig}{viel}}
+\newcommand{\Vitemxix}{Wie ist die Lautstärke des Dozenten?}\newcommand{\Vbewertungxix}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxx}{Wie ist die Rhetorik des Dozenten?}\newcommand{\Vbewertungxx}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxxi}{Wie beurteilst du die Leistungen des
+Dozenten insgesamt?}\newcommand{\Vbewertungxxi}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxxii}{Sind deine Kommilitonen aufmerksam?}\newcommand{\Vbewertungxxii}{\bewertung{selten}{immer}}
+\newcommand{\Vitemxxiii}{Beteiligen sich deine Kommilitonen aktiv an der Vorlesung?} \newcommand{\Vbewertungxxiii}{\bewertung{wenig}{viel}}
+\newcommand{\Vitemxxiv}{Lenken dich deine Kommilitonen vom
+Vorlesungsgeschehen ab?}\newcommand{\Vbewertungxxiv}{\bewertung{häufig}{selten}}
+\newcommand{\Vitemxxv}{Wie bewertest du die Verständlichkeit der
+Aufgaben?}\newcommand{\Vbewertungxxv}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Vitemxxvi}{Wie schätzt du den Schwierigkeitsgrad der
+Aufgaben ein?} \newcommand{\Vbewertungxxvi}{\bewertung{zu niedrig}{zu hoch}}
+
+%Auswertungstexte zu Übungen
+\newcommand{\Uitemi}{\Vitemi}
+\newcommand{\Uitemii}{\Vitemii}
+\newcommand{\Uitemiii}{Wie schätzt du den Arbeitsaufwand für das
+Lösen der Übungsaufgaben ein?}\newcommand{\Ubewertungiii}{\bewertung{zu niedrig}{zu hoch}}
+\newcommand{\Uitemiv}{Wie empfindest du die Gruppenstärke?}\newcommand{\Ubewertungiv}{\bewertung{zu groß}{angemessen}}
+\newcommand{\Uitemv}{Wie erhöht die Übung dein Interesse am
+Thema?} \newcommand{\Ubewertungv}{\bewertung{wenig}{viel}}
+\newcommand{\Uitemvi}{Wie empfindest du das fachliche Niveau?}\newcommand{\Ubewertungvi}{\bewertung{zu niedrig}{zu hoch}}
+\newcommand{\Uitemvii}{Knüpft der Stoff an die Vorlesung an?} \newcommand{\Ubewertungvii}{\bewertung{kaum}{meist}}
+\newcommand{\Uitemviii}{Funktioniert die Abstimmung zwischen dem
+Dozenten und dem Übungsleiter?}\newcommand{\Ubewertungviii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemix}{Wurde das Anwenden des Vorlesungsstoffes
+geübt?} \newcommand{\Ubewertungix}{\bewertung{wenig}{viel}}
+\newcommand{\Uitemx}{Wurde unabhängiges und selbstständiges
+Arbeiten gefördert?} \newcommand{\Ubewertungx}{\bewertung{wenig}{viel}}
+\newcommand{\Uitemxi}{Wie bewertest du die Übungsstruktur des
+Seminarleiters?}\newcommand{\Ubewertungxi}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxii}{Teilt der Übungsleiter die Übungszeit sinnvoll
+ein? (Rechnen von Aufgaben, Vortrag,
+Diskussion, Klärung von Fragen)} \newcommand{\Ubewertungxii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxiii}{Wie ist das Tempo der Übung?}\newcommand{\Ubewertungxiii}{\bewertung{zu langsam}{zu schnell}}
+\newcommand{\Uitemxiv}{Wie bewertest du das Tafelbild?}\newcommand{\Ubewertungxiv}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxv}{Wie bewertest du den Einsatz der
+Präsentationsmedien? (z.B. Polylux, Beamer)} \newcommand{\Ubewertungxv}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxvi}{Geht der Übungsleiter auf organisatorische
+Wünsche ein?}\newcommand{\Ubewertungxvi}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxvii}{Steht der Übungsleiter für weitere Rückfragen
+und Hilfestellungen zur Verfügung?} \newcommand{\Ubewertungxvii}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxviii}{Wirkt der Übungsleiter vorbereitet?}\newcommand{\Ubewertungxviii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxix}{Geht der Übungsleiter auf Anregungen und
+Fragen der Teilnehmer ein?}\newcommand{\Ubewertungxix}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxx}{Unterstützt der Übungsleiter bei der
+Bearbeitung der Aufgaben?} \newcommand{\Ubewertungxx}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxxi}{Wertet der Übungsleiter die Ergebnisse und Lösungen mit den Teilnehmern aus?} \newcommand{\Ubewertungxxi}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxxii}{Geht der Übungsleiter auf Ergebnisse ein,
+sodass aus Fehlern gelernt werden kann?} \newcommand{\Ubewertungxxii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxxiii}{Wie beurteilst du die Leistungen des
+Übungsleiters insgesamt?} \newcommand{\Ubewertungxxiii}{\bewertung{schlecht}{sehr gut}}
+\newcommand{\Uitemxxiv}{Bereiten sich deine Kommilitonen auf die
+Übung vor?}\newcommand{\Ubewertungxxiv}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxxv}{Beteiligen sich deine Kommilitonen aktiv an
+der Übung?}\newcommand{\Ubewertungxxv}{\bewertung{zu wenig}{angemessen}}
+\newcommand{\Uitemxxvi}{Sind deine Kommilitonen aufmerksam?}\newcommand{\Ubewertungxxvi}{\bewertung{selten}{immer}}
+\newcommand{\Uitemxxvii}{Lenken dich deine Kommilitonen vom
+Übungsgeschehen ab?}\newcommand{\Ubewertungxxvii}{\bewertung{häufig}{selten}}
+
+
+
+
+
+%Befehle für Zeichnungen
+%-------------------------
+
+%\boxplot{mittelw,0.1 Quantil, 0.25Quantil, median, 0.75Quantil, 0.9 Qunatil}
+%muss noch fertig geschrieben werden
+%\newcommand{\boxplot}[6]{
+%	\begin{tikzpicture}[scale=.5]
+%	\coordinate (links) at (0,0);
+%	\coordinate (rechts) at (5,0); %noch nicht fertig
+%	
+%	\draw (#3,-0.5) rectangle (#5,0.5);
+%	\end{tikzpicture}}
+
+%\boxplot{mittelwert, sd, %kA}
+%\newcommand{\mundsdplot}[3]{
+%	\begin{tikzpicture}[scale=1]
+%	\draw (0,0)-- ++(1,0)--(2,0)--(3,0)--(4,0)--(5,0);
+%	\foreach \i in {0,1,2,3,4,5}
+%		\fill (\i, 0) circle (1.5pt);
+%	\node[above] at (0,0) {wenig};
+%	\node[above] at (5,0) {viel};
+%	\draw[thick] (#1,-1.2em)--(#1,-0.2em);
+%	\draw[|-|] (#1-#2, -0.7em)--(#1+#2,-0.7em);
+%	\node at (6,0) {\fbox{#3\%}};
+%	\end{tikzpicture}}
+
+%Boxplot Zeichnen:
+%\boxplothistoa{hist1, hist2, hist3, hist4, hist5, kA, Mittelwert}
+\newcommand{\histogramplot}[7]{
+\begin{tikzpicture}[scale=0.5]
+	\draw (0,0)--(5,0)--(5,1)--(0,1)--cycle;
+	\draw (1,0)--(1,1);
+	\draw (2,0)--(2,1);
+	\draw (3,0)--(3,1);
+	\draw (4,0)--(4,1);
+	\draw (5.2,0)--(5.2,1)--(6.2,1)--(6.2,0)--cycle;
+	\fill (0,0)--(0,#1)--(1,#1)--(1,0)--cycle;
+	\fill (1,0)--(1,#2)--(2,#2)--(2,0)--cycle;
+	\fill (2,0)--(2,#3)--(3,#3)--(3,0)--cycle;
+	\fill (3,0)--(3,#4)--(4,#4)--(4,0)--cycle;
+	\fill (4,0)--(4,#5)--(5,#5)--(5,0)--cycle;
+	\fill (5.2,0)--(5.2,#6)--(6.2,#6)--(6.2,0)--cycle;
+	\node[below] at (2.6,0) {\bewertungstext};
+	%Nur wenn weniger als 60% aller Antworten bei "keine Angabe" liegen den Mittelwert auch zeichnen
+	\ifthenelse{\lengthtest{#6 pt<0.60pt}}{\draw[thick] (#7,1.2)--(#7,-0.2);}{}
+\end{tikzpicture}}
+
+
+
+
+%Befehle für Überschrift
+\newcommand{\Veranstaltung}[1]{\newcommand{\getVeranstaltung}{#1\xspace}}
+\newcommand{\Lesender}[1]{\newcommand{\getLesender}{#1\xspace}}
+\newcommand{\Semester}[1]{\newcommand{\getSemester}{#1\xspace}}
+\newcommand{\Ubungsleiter}[1]{\newcommand{\getUbungsleiter}{#1\xspace}}
+%\newcommand{\AnzahlStudenten}[1]{\newcommand{\getAnzahlStudenten}{#1\xspace}}
+
+\newcommand{\VoderU}{}
+
+\newcommand{\maketitleV}{
+%\cfoot{\normalfont\normalsize Einverständnis zum Aushang innerhalb der Fakultät (Datum, Unterschrift): \rlap{\parbox{7cm}{\vspace{1.5em}\dotfill}}}
+\renewcommand{\VoderU}{V}
+\setcounter{Fragenum}{0}
+{\centering \Large \textsf{Lehrevaluation: \textbf{\getVeranstaltung}} \\
+\large \underline{Vorlesung} von \getLesender im \getSemester\\[2em]}
+\normalfont\normalsize}
+
+\newcommand{\maketitleU}{
+\renewcommand{\VoderU}{U}
+\setcounter{Fragenum}{0}
+{\centering \Large \textsf{Lehrevaluation: \textbf{\getVeranstaltung}} \\
+\large \underline{Übung} von \getUbungsleiter im \getSemester (\getLesender) \\[2em]}
+\normalfont\normalsize}
+
+%\newcommand{\makeunikopf}{
+%\begin{tabularx}{0.95\columnwidth}{lXr}
+% \Large Universität Jena & & \includegraphics[width=20mm]{unilogo.png}
+%\end{tabularx}
+%\vspace{1mm}
+%\hrule %\vspace{2mm}
+%\begin{tabularx}{0.95\columnwidth}{lXrc}
+%  \Large FSR & test & \small \getSemester & \hspace{0.4mm} 
+%\end{tabularx}
+%}
+
+
+
+%Befehle für die Formatierung
+\newlength{\grafikbreite}
+\settowidth{\grafikbreite}{\histogramplot{1}{1}{1}{1}{1}{1}{1}}
+
+%Erzeugt eine Box mit einer Maximalbreite
+%\maximalbox[maximale textbreite]{text}
+%\newlength{\testlange} \newlength{\maxlang}
+%\newcommand{\maximalbox}[2][\textwidth]{
+%\settowidth{\testlange}{#2}\setlength{\maxlang}{#1}
+%\ifnum\testlange>\maxlang
+%	\setlength{\testlange}{\maxlang}
+%\fi
+%\the\testlange %Breite Ausgeben
+%\fragezuruck
+%\hspace{-7pt}\parbox[c]{\testlange}{#2}}
+
+
+%Befehle für die Auswertungen
+\newcommand{\AnzahlStudentenAuswertung}[1]{\vspace{-1ex}An dieser Evaluation haben #1 Studenten teilgenommen.\\}
+%Einfache Auswertung mit Mittelwert und Standardabweichung
+\newcommand{\MSDAuswertung}[2]{\fragetext \linebreak[3] \hspace*{1sp}~\dotfill~$#1 \pm #2$ \\}
+%Für die Fragen mit Kreuzche
+\newcommand{\Kreuzauswertung}[7]{%\maximalbox[\columnwidth-\grafikbreite-1em]{\fragetext} 
+\parbox[c]{\columnwidth-\grafikbreite-1em}{\fragetext}~\hfill~\parbox[c]{\grafikbreite}{\histogramplot{#1}{#2}{#3}{#4}{#5}{#6}{#7}}\\[5pt minus 2pt]}
+%\newcommand{\Kreuzauswertung}[7]{\begin{tabularx}{\columnwidth}{Xc}
+%\fragetext & \histogramplot{#1}{#2}{#3}{#4}{#5}{#6}{#7} 
+%\end{tabularx}}
+
+%Freitextantworten
+\newenvironment{freitextantworten}{%\\[1ex minus 7pt]
+\minisec{Freitextantworten} %\vspace{0pt minus 5pt}
+\begin{itemize} \setlength{\itemsep}{-4pt minus 5pt}
+}{
+\ifthenelse{\boolean{freitextda}}{}{\item[$-$] \textit{keine Freitextantworten} $-$}
+\end{itemize}\vfill
+%\smash{\parbox[c]{1\columnwidth}{\vspace{2.8em}Einverständnis zum Aushang innerhalb der Universität:}}
+}
+%um Freitext zu setzen, gut
+\newboolean{freitextda} \setboolean{freitextda}{false}
+\newcommand{\ftg}[2][\relax]{\setboolean{freitextda}{true}\item[$+$] #2 \ifx#1\relax \else\hfill(#1)\fi}
+%schlecht
+\newcommand{\fts}[2][\relax]{\setboolean{freitextda}{true}\item[$-$] #2 \ifx#1\relax \else\hfill(#1)\fi}
+
+
+
+%Textkörper beginnen
+\begin{document}

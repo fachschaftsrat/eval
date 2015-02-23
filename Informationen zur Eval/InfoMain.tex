@@ -1,0 +1,93 @@
+%Copyright Stephan Kuschel, 2010
+
+\input{Kopf.tex}
+
+\minisec{Formatdefinitionen für die Veranstaltungsliste}
+\begin{itemize}
+\item Die Veranstaltungsliste muss im \enquote{.xls} Format vorliegen und sollte als \enquote{Veranstaltungsliste<Semester>.xls} gespeichert werden.
+\item Innerhalb der Veranstaltungsliste.xls müssen die Daten in der ersten Tabelle gespeichert sein.
+\item Die erste Zeile der Tablle ist für die Spaltenköpfe (siehe unten) reserviert und wird von der Evalsoftware ignoriert.
+\item Die Spalten der Tabelle müssen in folgender Reihenfolge folgende Informationen beinhalten. Dabei ist darauf zu achten, dass der Inhalt einer jeden Zelle inhaltlich mit dem Datenformat der Zelle übereinstimmt. Also insbesondere keine Zahlen als Strings gespeichert werden. Die Spaltenköpfe und Datenformate sind in Klammern angegeben.
+\begin{enumerate}[{Spalte} A]
+\item (ULE\#, Integer) - freilassen fürs ULE
+\item (PAF\#, Integer) - Jeder Veranstaltungskomplex (als Oberbegriff für eine Vorlesung zusammen mit ALLEN Ihren Übungen) bekommt hier eine Nummer. Es ist sicherzustellen, dass ein Veranstaltungskomplex immer nur genau eine PAF\# hat. Bsp.: Eine Vorlesung hat drei Übungen: dann sind in der Liste insgesamt drei Zeilen für diese Veranstaltung zu belegen, alle mit identischer PAF\#.
+\item (Dozent, String) - Hier steht der Name des Dozenten - gemeint ist der, der die Vorlesung hält. So wie hier der Name steht taucht er nachher in der Eval auf! Der Name ist also ohne Rechtschreibfehler inkl. \enquote{Prof.}, \enquote{Dr.}, usw. auszuschreiben.
+\item (emailadresse Dozent, String) - Reserviert für zukünftige Programmversionen.
+\item (Übungsleiter, String) - Hier steht der Name des Übungsleiters. Gibt es keine Übung zu der Veranstaltung beleibt die Zelle leer (leere Zelle $\not=$ Leerzeichen in der Zelle!). Auch dieser Name wird so wie er hier steht in die Eval übernommen!
+\item (emailadresse Übungsleiter, String) - Reserviert für zukünftige Programmversionen.
+\item (Veranstaltung, String) - Der Name der Veranstaltung. Wird ebenfalls direkt in die Eval übernommen!
+\item [weitere] Spalten können beliebig verwendet werden. Deren Inhalt wird von dem Evalprogramm ignoriert.
+\end{enumerate}
+\item hat eine Vorlesung mehr als eine Übung (und besetzt damit auch mehr als eine Zeile) dann sind alle Informationen, die für den gesamten Veranstaltungskomplex gelten (also Name von Dozent und Veranstaltung) immer in allen Zeilen aufzuführen, in der diese PAF\# in der Tabelle auftaucht.
+\item Leerzeilen innerhalb der Tabelle sind zu vermeiden.
+\item weder PAF\# noch ULE\# müssen fortlaufend sein. Jede ULE\# darf nur in einer Zeile auftauchen. 
+\end{itemize}  
+
+
+
+\minisec{Formatdefinitionen für die Freitextantworten}
+\begin{itemize}
+\item Die Freitextantworten sind in der Datei \enquote{<Typ><PAF\#><optional>.tex} zu speichern. Dabei ist <PAF\#> durch die PAF\# der Veranstaltung zu ersetzen und <Typ> durch den Typ der Veranstaltung, d.h. \enquote{V} für Vorlesungen und \enquote{U} für Übungen (kein Ü!). Für Vorlesungen ist <optional> ein leerer String, bei Übungen hat <optional> die Form \enquote{-<wievielteubung>}. D.h. hier ist einzusetzen, in der wievielte Zeile mit derselben PAF\# diese Übung zu finden ist.
+Bsp.: \enquote{V1.tex}, \enquote{V23.tex}, \enquote{U23-1.tex}, \enquote{U23-2.tex}
+\item Innerhalb der Datei gibt es folgende  \LaTeX -Befehle:
+\begin{description}
+\item[$\backslash$ftg] zeigt eine Lobende Freitextantwort an. Als optionales Argument wird die Anzahl übergeben, wie oft diese Freitextantwort geschrieben wurde. (siehe $\backslash$fts)
+\item[$\backslash$fts] zeigt eine kritische Freitextantwort an. Als optionales Argument wird die Anzahl übergeben, wie oft diese Freitextantwort geschrieben wurde. Gab es diese Antwort nur einmal so ist das Optionale Argument entweder ganz weg oder leer zu lassen. NICHT eine \enquote{1} hineinschreiben!
+\end{description}
+Bsp.: \enquote{$\backslash$fts[4]\{der war schlecht!\}}, \enquote{$\backslash$ftg[7]\{der war gut!\}}, \enquote{$\backslash$ftg[]\{das hier hat nur einer geschrieben\}}, \enquote{$\backslash$fts \{das hier auch\}}
+\item Die Freitextantworten in der Datei müssen sortiert werden:\\
+primär: zuerst Gute, dann Schlechte\\
+sekundär: zuerst die, die oft genannt wurden, dann die die nur einmal geschrieben wurden.
+\item gibt es zu einer Veranstaltung keine Freitextantworten, so muss dennoch eine Datei für diese Veranstaltung erstellt werden. Existiert gar keine Datei, so erscheint auf der Eval, dass die Freitextantworten vergessen wurden.
+\item die Dateien sind mit \enquote{ISO8859-1} Zeichensatz zu speichern.
+\item \LaTeX Syntax beachten: kein $\slash$, $\backslash$, Befehl $\backslash$enquote\{text\} anstatt \enquote{text}, $\cdots$
+\item Freitextantworten testen, bevor sie weggeschickt werden. (Freitexttesten.tex)
+\end{itemize}
+
+
+
+\newpage
+\minisec{Die Eval in einer Lehrveranstaltung durchfüren}
+\begin{enumerate}
+\item \underline{vorher:} der Veranstaltungsliste die Anzahl der Übungen zu der Veranstaltung entnehmen und Namen der Übungsleiter aufschreiben.
+\item jetzt erst in die Vorlesung gehen.
+\item in der Vorlesung die Namen der Übungsleiter an die Tafel schreiben. Daraufhinweisen, dass die Studenten nicht vergessen den Namen des Übungsleiters in auf dem Blatt einzutragen!
+\item Prüfen ob es weitere Übungsleiter gibt oder einige durch andere ersetzt wurden.
+\item (besonders in frühen semestern) Einleitende Worte sagen: Eval ist kein Platz für Unmut sondern um kommenden Semestern zu helfen!
+\item Falls nötig: Darauf achten, dass englische Bögen nur an Erasmus/ASP Leute verteielt werden. Die deutschen Studenten sollen auch Deutsche Bögen ausfüllen!
+\item Falls es eine Vorlesung mit mehreren Vorlesenden ist: \begin{itemize}
+\item Aus der Veranstaltungsliste geht hervor, welcher der Vorlesenden die Hauptverantwortung für die Veranstaltung trägt. Auf der Rückseite des Evalbogens der Vorlesung des Hauptverantwortlichen müssen dann auch die Übungen evaluiert werden.
+\item Die Rückseite des Evalbogens für alle anderen Vorlesenden dieser Veranstaltung darf nicht ausgefüllt werden. (Also einfach alles in Korrespondenz zu den Informationen in der Veranstaltungsliste: Tatsächlich wird das dann so gehandhabt, dass es eine Vorlesung mit mehreren Übungen gab und für jeden weitern Vorlesenden steht in der Veranstaltungsliste eine Vorlesung ohne Übung. Daher werden die Übungsevaluationen, die auf der falschen Rückseite ausgefüllt werden irgnoriert werden.)
+\end{itemize}
+\item Nachdem alle diese Infos mindestens 2 mal gesagt wurden (kein Scheiss, die checken das echt nicht!): Bögen austeilen.
+\item mit dem Prof schwatzen, sich bedanken. Dem Prof auch nen Bogen in die Hand drücken, damit er weiss was auf Ihn zukommt.
+\item Die Bögen nach Übungsleiter getrennt einsammeln und Veranstaltung verlassen.
+\item Die Veranstaltungsliste gemäß den informationen aus der Vorlesung aktualisieren, sodass das ULE die Übungsleiter alle richig zuordnen kann (s.u.). Dabei muss man davon ausgehen, dass das ULE die akutalisierten Informationen noch nicht hat.
+\item Freitextantworten gemäß Veranstaltungsliste und Formatdefinitionen auswerten \underline{und} testen. Beim Auswerten der Freitextantworten beachten:\begin{itemize}
+\setlength{\itemsep}{-4pt minus 5pt}
+\item Inhaltlich gleiche Freitextantworten zusammenfassen und Anzahl hinschreiben, wie oft die Freitextantwort geschrieben wurde.
+\item Freitextantworten \enquote{präsentierbar} formulieren. Dabei darf aber nicht verloren gehen, was tatsächlich gemeint war.
+\item Sehr Beleidigende und destruktive Freitextantworten streichen. Persönliche Kritik am Dozenten und/oder der Veranstaltung kann gut mit \enquote{Fundamentalkritik an $\ldots$} umschrieben werden. Falls möglich sollte aber nicht verloren gehen, wodurch diese Kritik zustande kam. Falls sich das nicht vermeiden lässt, den Grund für die Kritik als Kommentar\footnote{Als \LaTeX Kommentar, sodass der Text nicht mit in der Eval auftaucht. Kommentare in \LaTeX beginnen mit \%} mit in die .tex Datei schreiben.
+\item Alle Freitextantworten im Konjunktiv formulieren. Wer nicht weiss was das ist, fragt mich vorher.
+\item Die .tex Dateien der Freitextantworten auf dem FSR-Rechner im richtigen Verzeichnis speichern (ist nicht schwer zu finden) oder per email an mich schicken.
+\end{itemize}
+\end{enumerate}
+
+\minisec{Eval zum ULE schicken}
+\begin{enumerate}
+\item Vor dem wegschicken müssen die Freitextantworten ausgewertet worden seien!
+\item Für jeden Veranstaltungskomplex (eine PAF\#) immer genau einen Umschlag verwenden.
+\item die Evalbögen nach Übungen sortieren und mit Trennblättern (falls vorhanden, haben Trennblätter ein andere Farbe als weiss - vorzugsweise rot) voneinander trennen. Sollten die Namen der Übungsleiter nicht lesbar sein, einfach leserlich aufs Trennblatt/Deckblatt schreiben.
+\item Dem Umschlag ein Deckblatt hinzufügen (oder außen beschriften) mit
+\begin{itemize}
+\item Namen der Veranstatltung
+\item PAF\#. Sonst kann das ULE die nicht richtig zuordnen. Das ist ganz wichtig!
+\item Anzahl der Übungsleiter. Also der Anzahl der ULE\# die das ULE daraus machen soll. Diese Anzahl muss mit der Veranstaltungsliste übereinstimmen (\underline{Prüfen!})und die einzelnen Evalbögen müssen den Übungen eindeutig zuzuordnen sein (\underline{Sicherstellen!}). Weicht hierbei irgendetwas von der Veranstaltungsliste ab, das dem ULE mitteilen. Sonst können die damit nicht klar kommen und wir bekommen nur Grütze zurück.
+\end{itemize}
+\item wegschicken
+\end{enumerate}
+
+
+
+\end{document}
+

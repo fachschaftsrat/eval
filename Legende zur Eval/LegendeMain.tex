@@ -1,0 +1,53 @@
+%Copyright Stephan Kuschel, 2010
+
+\input{Kopf.tex}
+
+\section*{Zustimmung zur Veröffentlichung \small (nur für Vorlesungen)}
+Zustimmungen für die Veröffentlichungen von Evaluationen von Vorlesungen gelten automatisch für alle Übungen zu diesen Vorlesungen entsprechend.
+
+\enquote{Ich bin mit dem Aushang der vom Fachschaftsrat erstellten Lehrevaluationen in Gebäuden der Physikalisch Astronomischen Fakultät der FSU Jena einverstanden. {\small (Vor dem Aushang werden die Evaluationen von der Evaluationskommission genehmigt. Daher kann Wortlaut einzelner Freitextantworten im Aushang abweichen.)}} \marginpar{\rotatebox{-90}{\hspace*{2em}Bitte \underline{alle} Veranstaltungen eintragen}} \\[1.5em] 
+\begin{Form}\TextField[name=name, width=9cm]{\underline{Name:}} \qquad \TextField[name=sem, width=3.5cm]{\underline{Semester:}}\end{Form}  \\[1.5em]
+\begin{Form}
+\begin{tabular}{p{7cm}p{9cm}}
+Veranstaltung & Datum \& Unterschrift \\ \hline
+\mbox{\TextField[name=eins, width=7cm, height=2em]{}}& \mbox{\TextField[name=datum, width=3cm, height=2em]{}} \\ \hline
+\mbox{\TextField[name=zwei, width=7cm, height=2em]{}}& \mbox{\TextField[name=datum, width=3cm, height=2em]{}} \\ \hline
+\mbox{\TextField[name=drei, width=7cm, height=2em]{}}& \mbox{\TextField[name=datum, width=3cm, height=2em]{}} \\ \hline
+\mbox{\TextField[name=vier, width=7cm, height=2em]{}}& \mbox{\TextField[name=datum, width=3cm, height=2em]{}} \\ \hline
+\mbox{\TextField[name=funf, width=7cm, height=2em]{}}& \mbox{\TextField[name=datum, width=3cm, height=2em]{}} \\ \hline
+%\mbox{\TextField[name=sechs, width=7cm, height=2em]{}}& \\ \hline
+\end{tabular}\end{Form} \\[1em]
+\textbf{Bitte} senden Sie diese (halbe) Seite per Hauspost an den FSR, werfen Sie sie im Briefkasten des FSR (Erdgeschoss im Max-Wien-Platz 1) ein oder geben Sie sie einem Vertreter des FSR mit.\\[1ex]
+Der FSR dankt Ihnen herzlich für Ihre Mitarbeit! \\[1.5em]
+\relax\llap{\ScissorRight$\ldots\ldots$}\dotfill\ScissorRight\dotfill\rlap{$\ldots\ldots$\ScissorRight}
+\vspace*{-0.5em}
+\section*{Legende zur Lehrevaluation}
+%\author{von Stephan Kuschel}
+%\date{}
+%\maketitle
+\thispagestyle{scrheadings}
+
+\minisec{Antworten mit Zahlen}
+\Vitemi \MSDAuswertung{7.3}{2.1} \par
+Hier sind \enquote{Mittelwert $\pm$ Standardabweichung} dargestellt.
+
+\minisec{Antworten zum Ankreuzen}
+\renewcommand{\bewertungstext}{\bewertung{kaum}{meist}}
+\Vitemviii \Kreuzauswertung{0.}{0.0666667}{0.1}{0.633333}{0.2}{0.}{3.46667} \par
+Die Antworten zum Ankreuzen werden in der Auswertung in Form eines Histogramms dargestellt. Die Studenten haben dabei sechs Antwortmöglichkeiten, die wie folgt dargestellt sind:
+\begin{itemize}
+\item die ersten fünf Kästchen zeigen die Bewertung der Studenten an: Unter dem Histogramm ist der Maßstab angegeben, also die Bedeutung eines Kreuzes ganz links bzw. ganz rechts. (NICHT: die Bedeutung des Kästchens unter dem der Text steht!) 
+\item das nach rechts abgesetzte Kästchen entspricht \enquote{keine Angabe}.
+\item Der senkrechte Strich zeigt den Mittelwert über die ersten fünf Kästchen an. Sollten mehr als 40\% der Antworten bei \enquote{keine Angabe} liegen, wird kein Mittelwert angezeigt.
+\end{itemize}
+
+\begin{freitextantworten}
+\ftg[3]{In den Klammern am Ende der Zeile steht die Anzahl der Studenten, die diesen Text von sich aus in den Evaluationsbogen geschrieben haben. Bei diesem Text sind es drei.}
+\ftg{Bei manchen Texten kann man nur schwer erkennen ob es sich um Lob oder Kritik handeln soll. Daher beginnen alle Freitextantworten mit einem $+$ für Lob und einem $-$ bei Verbesserungsvorschlägen. Dieser Text ist ein Lob.}
+\fts[2]{Dieser Text ist ein Verbesserungsvorschlag, der von insgesamt zwei Studenten geschrieben wurde.}
+\InputIfFileExists{freitextantworten/V71.tex}{}{}
+%\InputIfFileExists{freitextantworten/V71.tex}{}{}
+%\InputIfFileExists{freitextantworten/V72.tex}{}{}
+\end{freitextantworten}
+
+\end{document}
