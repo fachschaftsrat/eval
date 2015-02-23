@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     46375,       1073]
-NotebookOptionsPosition[     44561,       1013]
-NotebookOutlinePosition[     44978,       1029]
-CellTagsIndexPosition[     44935,       1026]
+NotebookDataLength[     61571,       1419]
+NotebookOptionsPosition[     59827,       1360]
+NotebookOutlinePosition[     60244,       1376]
+CellTagsIndexPosition[     60201,       1373]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,7 +22,7 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
-  RowBox[{"(*", 
+  RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"Copyright", " ", "Stephan", " ", "Kuschel"}], ",", "2009"}], 
    "*)"}], "\[IndentingNewLine]", 
@@ -50,7 +50,9 @@ Cell[BoxData[
        RowBox[{"\"\<\[UDoubleDot]\>\"", "\[Rule]", "\"\<u\>\""}], ",", " ", 
        RowBox[{"\"\<\[CapitalUDoubleDot]\>\"", "\[Rule]", "\"\<u\>\""}], ",", 
        " ", 
-       RowBox[{"\"\</\>\"", "\[Rule]", "\"\<\>\""}]}], "}"}]}], ";"}], 
+       RowBox[{"\"\</\>\"", "\[Rule]", "\"\<\>\""}], ",", " ", 
+       RowBox[{"\"\<,\>\"", "\[Rule]", "\"\<\>\""}], ",", " ", 
+       RowBox[{"\"\<:\>\"", "\[Rule]", "\"\<\>\""}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"daten", "=", 
@@ -69,7 +71,7 @@ Cell[BoxData[
       "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{"veranstaltungen", "\[LeftDoubleBracket]", 
-    RowBox[{"1", ";;", "2"}], "\[RightDoubleBracket]"}], 
+    RowBox[{"1", ";;", "3"}], "\[RightDoubleBracket]"}], 
    "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
@@ -82,8 +84,8 @@ Cell[BoxData[
        RowBox[{"{", "1", "}"}], ",", 
        RowBox[{"{", "2", "}"}], ",", 
        RowBox[{"{", "3", "}"}], ",", 
-       RowBox[{"{", "4", "}"}], ",", 
-       RowBox[{"{", "5", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"4", ",", "5"}], "}"}], ",", 
        RowBox[{"{", "6", "}"}], ",", 
        RowBox[{"{", "7", "}"}], ",", 
        RowBox[{"{", "8", "}"}], ",", 
@@ -117,15 +119,15 @@ Cell[BoxData[
        RowBox[{"{", "32", "}"}], ",", 
        RowBox[{"{", "33", "}"}], ",", 
        RowBox[{"{", "34", "}"}], ",", 
-       RowBox[{"{", "35", "}"}], ",", 
-       RowBox[{"{", "36", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"35", ",", "36"}], "}"}], ",", 
        RowBox[{"{", "37", "}"}], ",", 
        RowBox[{"{", "38", "}"}], ",", 
        RowBox[{"{", "39", "}"}], ",", 
        RowBox[{"{", "40", "}"}], ",", 
        RowBox[{"{", "41", "}"}], ",", 
-       RowBox[{"{", "42", "}"}], ",", 
-       RowBox[{"{", "43", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"42", ",", "43"}], "}"}], ",", 
        RowBox[{"{", "44", "}"}], ",", 
        RowBox[{"{", "45", "}"}], ",", 
        RowBox[{"{", "46", "}"}], ",", 
@@ -136,23 +138,22 @@ Cell[BoxData[
        RowBox[{"{", "51", "}"}], ",", 
        RowBox[{"{", "52", "}"}], ",", 
        RowBox[{"{", "53", "}"}], ",", 
-       RowBox[{"{", "54", "}"}], ",", 
-       RowBox[{"{", "55", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"54", ",", "55"}], "}"}], ",", 
        RowBox[{"{", "56", "}"}], ",", 
        RowBox[{"{", "57", "}"}], ",", 
        RowBox[{"{", "58", "}"}], ",", 
        RowBox[{"{", "63", "}"}], ",", 
        RowBox[{"{", "64", "}"}], ",", 
        RowBox[{"{", "65", "}"}], ",", 
-       RowBox[{"{", "66", "}"}], ",", 
-       RowBox[{"{", "67", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"66", ",", "67"}], "}"}], ",", 
        RowBox[{"{", "68", "}"}], ",", 
        RowBox[{"{", "69", "}"}], ",", 
        RowBox[{"{", "70", "}"}], ",", 
        RowBox[{"{", "71", "}"}], ",", 
        RowBox[{"{", "72", "}"}], ",", 
-       RowBox[{"{", "73", "}"}], ",", 
-       RowBox[{"{", "74", "}"}]}], "}"}]}], ";"}]}]}]], "Input",
+       RowBox[{"{", "73", "}"}]}], "}"}]}], ";"}]}]}]], "Input",
  CellChangeTimes->{{3.457721522375*^9, 3.45772153575*^9}, 
    3.45772156734375*^9, {3.4577217589375*^9, 3.457721762203125*^9}, {
    3.457961050578125*^9, 3.4579610514375*^9}, {3.457981740375*^9, 
@@ -163,8 +164,12 @@ Cell[BoxData[
    3.4584816384030046`*^9}, {3.458641331203125*^9, 3.45864134271875*^9}, {
    3.458641397453125*^9, 3.45864142634375*^9}, {3.45864194396875*^9, 
    3.458641944109375*^9}, {3.45864366221875*^9, 3.458643662515625*^9}, {
-   3.633696376143877*^9, 3.633696380653659*^9}, {3.633697109083983*^9, 
-   3.633697115104537*^9}}],
+   3.463641874109375*^9, 3.463641876828125*^9}, 3.4638979120625*^9, 
+   3.46389795515625*^9, 3.463897994375*^9, {3.463898125625*^9, 
+   3.463898126484375*^9}, {3.464886520234375*^9, 3.464886523796875*^9}, {
+   3.464886657625*^9, 3.464886661046875*^9}, {3.464887612953125*^9, 
+   3.464887626875*^9}, {3.466148319421875*^9, 3.466148322859375*^9}, {
+   3.6336976161317472`*^9, 3.633697622317274*^9}}],
 
 Cell[BoxData["\<\"/glusterhome/stephan/Dokumente/Studium/FSR/Eval.git\"\>"], \
 "Output",
@@ -178,8 +183,14 @@ Cell[BoxData["\<\"/glusterhome/stephan/Dokumente/Studium/FSR/Eval.git\"\>"], \
    3.4586414284375*^9, 3.45864204853125*^9, 3.458643691453125*^9, 
    3.45925916513675*^9, 3.46150385121875*^9, 3.461505594546875*^9, 
    3.461513553265625*^9, 3.46159849428125*^9, 3.461666222734375*^9, 
-   3.46167658921875*^9, 3.633696173815668*^9, {3.6336963774983473`*^9, 
-   3.6336963948791943`*^9}}],
+   3.46167658921875*^9, 3.461676783609375*^9, 3.461746427890625*^9, 
+   3.46234987534375*^9, 3.463137647984375*^9, 3.463636396296875*^9, 
+   3.463641881046875*^9, 3.46389724265625*^9, 3.46389817234375*^9, 
+   3.464861539046875*^9, 3.46488300884375*^9, 3.464886433421875*^9, 
+   3.4648865244375*^9, 3.464886661765625*^9, {3.46488761678125*^9, 
+   3.464887628015625*^9}, 3.465831952546875*^9, 3.465845792140625*^9, 
+   3.46614792065625*^9, 3.46614844621875*^9, 3.466163810109375*^9, 
+   3.46696535490625*^9, 3.4677299622734013`*^9, 3.6336973808632517`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -205,8 +216,14 @@ Cell[BoxData[
    3.4586414284375*^9, 3.45864204853125*^9, 3.458643691453125*^9, 
    3.45925916513675*^9, 3.46150385121875*^9, 3.461505594546875*^9, 
    3.461513553265625*^9, 3.46159849428125*^9, 3.461666222734375*^9, 
-   3.46167658921875*^9, 3.633696173815668*^9, {3.6336963774983473`*^9, 
-   3.6336963952007732`*^9}}],
+   3.46167658921875*^9, 3.461676783609375*^9, 3.461746427890625*^9, 
+   3.46234987534375*^9, 3.463137647984375*^9, 3.463636396296875*^9, 
+   3.463641881046875*^9, 3.46389724265625*^9, 3.46389817234375*^9, 
+   3.464861539046875*^9, 3.46488300884375*^9, 3.464886433421875*^9, 
+   3.4648865244375*^9, 3.464886661765625*^9, {3.46488761678125*^9, 
+   3.464887628015625*^9}, 3.465831952546875*^9, 3.465845792140625*^9, 
+   3.46614792065625*^9, 3.46614844621875*^9, 3.466163810109375*^9, 
+   3.46696535490625*^9, 3.4677299622734013`*^9, 3.633697382431096*^9}],
 
 Cell[BoxData["\<\"1\"\>"], "Output",
  CellChangeTimes->{
@@ -219,8 +236,14 @@ Cell[BoxData["\<\"1\"\>"], "Output",
    3.4586414284375*^9, 3.45864204853125*^9, 3.458643691453125*^9, 
    3.45925916513675*^9, 3.46150385121875*^9, 3.461505594546875*^9, 
    3.461513553265625*^9, 3.46159849428125*^9, 3.461666222734375*^9, 
-   3.46167658921875*^9, 3.633696173815668*^9, {3.6336963774983473`*^9, 
-   3.6336963952019367`*^9}}],
+   3.46167658921875*^9, 3.461676783609375*^9, 3.461746427890625*^9, 
+   3.46234987534375*^9, 3.463137647984375*^9, 3.463636396296875*^9, 
+   3.463641881046875*^9, 3.46389724265625*^9, 3.46389817234375*^9, 
+   3.464861539046875*^9, 3.46488300884375*^9, 3.464886433421875*^9, 
+   3.4648865244375*^9, 3.464886661765625*^9, {3.46488761678125*^9, 
+   3.464887628015625*^9}, 3.465831952546875*^9, 3.465845792140625*^9, 
+   3.46614792065625*^9, 3.46614844621875*^9, 3.466163810109375*^9, 
+   3.46696535490625*^9, 3.4677299622734013`*^9, 3.633697382432026*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -232,8 +255,10 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{
     "1.`", ",", "\<\"MacGyver\"\>", ",", "\<\"Chuck Norris\"\>", 
-     ",", "\<\"Atombomben mit dem Taschenmesser III\"\>"}], "}"}]}], 
-  "}"}]], "Output",
+     ",", "\<\"Atombomben mit dem Taschenmesser III\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>"}], 
+    "}"}]}], "}"}]], "Output",
  CellChangeTimes->{
   3.457981742171875*^9, 3.458305688234375*^9, {3.45830586728125*^9, 
    3.458305918015625*^9}, 3.458400363390625*^9, 3.458401933078125*^9, 
@@ -244,8 +269,14 @@ Cell[BoxData[
    3.4586414284375*^9, 3.45864204853125*^9, 3.458643691453125*^9, 
    3.45925916513675*^9, 3.46150385121875*^9, 3.461505594546875*^9, 
    3.461513553265625*^9, 3.46159849428125*^9, 3.461666222734375*^9, 
-   3.46167658921875*^9, 3.633696173815668*^9, {3.6336963774983473`*^9, 
-   3.6336963952395277`*^9}}]
+   3.46167658921875*^9, 3.461676783609375*^9, 3.461746427890625*^9, 
+   3.46234987534375*^9, 3.463137647984375*^9, 3.463636396296875*^9, 
+   3.463641881046875*^9, 3.46389724265625*^9, 3.46389817234375*^9, 
+   3.464861539046875*^9, 3.46488300884375*^9, 3.464886433421875*^9, 
+   3.4648865244375*^9, 3.464886661765625*^9, {3.46488761678125*^9, 
+   3.464887628015625*^9}, 3.465831952546875*^9, 3.465845792140625*^9, 
+   3.46614792065625*^9, 3.46614844621875*^9, 3.466163810109375*^9, 
+   3.46696535490625*^9, 3.4677299622734013`*^9, 3.633697382466667*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -260,10 +291,8 @@ Cell[BoxData[
 Cell[BoxData["\<\"item_026\"\>"], "Output",
  CellChangeTimes->{{3.458409747125*^9, 3.4584097711875*^9}, {
    3.458568850640625*^9, 3.45856888034375*^9}, {3.458569030359375*^9, 
-   3.4585690325*^9}, 3.633696422116637*^9}]
+   3.4585690325*^9}, 3.633697387727453*^9}]
 }, Open  ]],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -272,22 +301,31 @@ Cell[BoxData[
     "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"schreibeKopf", "[", 
+    RowBox[{"dateibeginn", "=", "\"\<\\input{Kopf.tex}\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dateiende", "=", "\"\<\\end{multicols}\\end{document}\>\""}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "nochneEval", "=", 
+     "\"\<\\end{multicols} \[Backslash]newpage \
+\[Backslash]begin{multicols}{2}\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"getKopf", "[", 
      RowBox[{
-     "str_", ",", "dozent_", ",", " ", "ubungsleiter_", ",", " ", "semester_",
-       " ", ",", " ", "veranstaltungsname_", ",", " ", "ULENummer_"}], "]"}], 
-    ":=", "\[IndentingNewLine]", 
-    RowBox[{"WriteString", "[", 
-     RowBox[{"str", ",", " ", 
-      RowBox[{"\"\<\\input{Kopf.tex} \\Veranstaltung{\>\"", "<>", 
-       RowBox[{"StringReplace", "[", 
-        RowBox[{"veranstaltungsname", ",", " ", 
-         RowBox[{"\"\<&\>\"", "\[Rule]", "\"\<\\&\>\""}]}], "]"}], "<>", 
-       "\"\<} \\Lesender{\>\"", "<>", "dozent", "<>", "\"\<} \\Semester{\>\"",
-        "<>", "semester", "<>", "\"\<} \\Ubungsleiter{\>\"", "<>", 
-       "ubungsleiter", "<>", "\"\<} \\ULENummer{\>\"", "<>", 
-       RowBox[{"ToString", "[", "ULENummer", "]"}], "<>", "\"\<}\>\""}]}], 
-     "]"}]}], "\[IndentingNewLine]", 
+     "dozent_", ",", " ", "ubungsleiter_", ",", " ", "semester_", " ", ",", 
+      " ", "veranstaltungsname_", ",", " ", "ULENummer_"}], "]"}], ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\"\<\\Veranstaltung{\>\"", "<>", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"veranstaltungsname", ",", " ", 
+       RowBox[{"\"\<&\>\"", "\[Rule]", "\"\<\\&\>\""}]}], "]"}], "<>", 
+     "\"\<} \\Lesender{\>\"", "<>", "dozent", "<>", "\"\<} \\Semester{\>\"", "<>",
+      "semester", "<>", "\"\<} \\Ubungsleiter{\>\"", "<>", "ubungsleiter", 
+     "<>", "\"\<} \\ULENummer{\>\"", "<>", 
+     RowBox[{"ToString", "[", "ULENummer", "]"}], "<>", "\"\<}\>\""}]}], 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"Mittelwert", " ", "und", " ", "SD", " ", "Auswertung"}], "*)"}], 
    "\[IndentingNewLine]", 
@@ -444,152 +482,13 @@ Cell[BoxData[
    3.4584813563561296`*^9, 3.4584813565280046`*^9}, 3.458568722*^9, {
    3.461600851765625*^9, 3.46160085278125*^9}, {3.461600918703125*^9, 
    3.461600993890625*^9}, {3.461601105875*^9, 3.461601122671875*^9}, {
-   3.461601391046875*^9, 3.461601394625*^9}},
+   3.461601391046875*^9, 3.461601394625*^9}, {3.4616022069375*^9, 
+   3.461602218328125*^9}, 3.461602681296875*^9, {3.461602749421875*^9, 
+   3.4616029195625*^9}, 3.461603070609375*^9, {3.461679146890625*^9, 
+   3.461679159484375*^9}, 3.461679223171875*^9, {3.461679282390625*^9, 
+   3.461679316921875*^9}, {3.463137960171875*^9, 3.463137977125*^9}, {
+   3.463138969625*^9, 3.463139006984375*^9}},
  EmphasizeSyntaxErrors->True],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"i\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696742445298*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"V\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696742520032*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"L\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696742599009*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"S\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.6336967426908493`*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"U\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696742863168*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"U\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696742966256*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"M\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696742992218*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Syntax", "::", "stresc"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unknown string escape \\\\\[NoBreak]\\!\\(\\\"K\\\"\\)\
-\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{{3.6336967389489307`*^9, 3.633696743044348*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", "test", "*)"}], "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"MSDAuswertung", "[", 
-    RowBox[{"aktuelledatenmenge", ",", "1"}], "]"}], "\[IndentingNewLine]", 
-   RowBox[{"Kreuzauswertung", "[", 
-    RowBox[{"aktuelledatenmenge", ",", "9"}], "]"}]}]}]], "Input",
- CellChangeTimes->{{3.458404039328125*^9, 3.458404081390625*^9}, {
-   3.45840417815625*^9, 3.458404179921875*^9}, {3.458404234234375*^9, 
-   3.458404236171875*^9}, {3.4584043595625*^9, 3.458404372921875*^9}, {
-   3.45840855996875*^9, 3.458408564125*^9}, 3.458408885640625*^9, {
-   3.45841002321875*^9, 3.4584100234375*^9}, {3.45841014490625*^9, 
-   3.458410145*^9}, {3.458410702609375*^9, 3.45841070296875*^9}, 
-   3.458410786015625*^9, {3.6336964395010233`*^9, 3.633696444438705*^9}, {
-   3.633696712518262*^9, 3.633696728364233*^9}}],
-
-Cell[BoxData["\<\"\\\\MSDAuswertung{8087.}{0.} \"\>"], "Output",
- CellChangeTimes->{{3.45840405815625*^9, 3.4584040818125*^9}, 
-   3.458404124546875*^9, {3.458404174359375*^9, 3.45840418028125*^9}, 
-   3.45840423665625*^9, 3.458404373875*^9, 3.45840453396875*^9, 
-   3.458404598375*^9, {3.458404725609375*^9, 3.458404766453125*^9}, 
-   3.458408201109375*^9, 3.458408564609375*^9, 3.458408886*^9, 
-   3.458409141328125*^9, 3.4584094023125*^9, 3.458410023953125*^9, {
-   3.458410132359375*^9, 3.45841014521875*^9}, 3.458410214515625*^9, 
-   3.458410261234375*^9, {3.458410499859375*^9, 3.45841054196875*^9}, 
-   3.458410620875*^9, {3.458410678046875*^9, 3.4584107035*^9}, 
-   3.458410786671875*^9, 3.45841096059375*^9, {3.45841100425*^9, 
-   3.4584110708125*^9}, 3.458412140921875*^9, 3.45847700725*^9, 
-   3.4584776501061296`*^9, {3.6336964404670277`*^9, 3.633696445052187*^9}, {
-   3.633696713035974*^9, 3.633696728710746*^9}}],
-
-Cell[BoxData["\<\"\\\\Kreuzauswertung{0.}{0.142857}{0.642857}{0.214286}{0.}{0.\
-}{2.57143} \"\>"], "Output",
- CellChangeTimes->{{3.45840405815625*^9, 3.4584040818125*^9}, 
-   3.458404124546875*^9, {3.458404174359375*^9, 3.45840418028125*^9}, 
-   3.45840423665625*^9, 3.458404373875*^9, 3.45840453396875*^9, 
-   3.458404598375*^9, {3.458404725609375*^9, 3.458404766453125*^9}, 
-   3.458408201109375*^9, 3.458408564609375*^9, 3.458408886*^9, 
-   3.458409141328125*^9, 3.4584094023125*^9, 3.458410023953125*^9, {
-   3.458410132359375*^9, 3.45841014521875*^9}, 3.458410214515625*^9, 
-   3.458410261234375*^9, {3.458410499859375*^9, 3.45841054196875*^9}, 
-   3.458410620875*^9, {3.458410678046875*^9, 3.4584107035*^9}, 
-   3.458410786671875*^9, 3.45841096059375*^9, {3.45841100425*^9, 
-   3.4584110708125*^9}, 3.458412140921875*^9, 3.45847700725*^9, 
-   3.4584776501061296`*^9, {3.6336964404670277`*^9, 3.633696445052187*^9}, {
-   3.633696713035974*^9, 3.633696728712178*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ToExpression", "@", 
-  RowBox[{"aktuelledatenmenge", "[", 
-   RowBox[{"[", "7", "]"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.458409650140625*^9, 3.45840966246875*^9}, {
-  3.45841073990625*^9, 3.45841078140625*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "22.`", ",", "20.`", ",", "30.`", ",", "10.`", ",", "20.`", ",", "25.`", 
-   ",", "30.`", ",", "30.`", ",", "10.`", ",", "10.`", ",", "20.`", ",", 
-   "40.`", ",", "35.`", ",", "20.`"}], "}"}]], "Output",
- CellChangeTimes->{
-  3.458409662859375*^9, {3.458410740765625*^9, 3.458410781734375*^9}, 
-   3.458411072375*^9, 3.4584776519498796`*^9, 3.633696732834723*^9}]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -599,10 +498,42 @@ Cell[BoxData[
    "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"VorlesungAuswerten", "[", "nummer_", "]"}], ":=", 
+    RowBox[{"getTexfileV", "[", "nummer_", "]"}], ":=", 
     RowBox[{"Module", "[", 
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "dozent", ",", " ", "ubungsleiter", ",", " ", "veranstaltungsname"}],
+          "}"}], "=", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{"veranstaltungen", ",", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], "==", 
+             RowBox[{"verlinkungen", "\[LeftDoubleBracket]", 
+              RowBox[{"nummer", ",", " ", "1"}], "\[RightDoubleBracket]"}]}], 
+            "&"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", 
+          RowBox[{"2", ";;", "4"}]}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{
+         RowBox[{
+         "SEMESTER", "<>", "\"\< \>\"", "<>", "dozent", "<>", "\"\< \>\"", 
+          " ", "<>", "veranstaltungsname", "<>", "\"\< Vorlesung\>\"", "<>", 
+          "\"\<.tex\>\""}], ",", " ", "TEXTERSATZ"}], "]"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"getAuswertungV", "[", "nummer_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"ret", "=", "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{"(*", 
        RowBox[{
        "Datenliste", " ", "f\[UDoubleDot]r", " ", "diese", " ", "Vorlesung", 
@@ -635,8 +566,6 @@ Cell[BoxData[
        RowBox[{"aktuelledatenmenge", "=", 
         RowBox[{"Transpose", "@", "aktuelledatenmenge"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"Tex", " ", "beginnen"}], "*)"}], "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"{", 
          RowBox[{
@@ -655,124 +584,90 @@ Cell[BoxData[
          RowBox[{"1", ",", 
           RowBox[{"2", ";;", "4"}]}], "\[RightDoubleBracket]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"texfile", "=", 
-        RowBox[{"StringReplace", "[", 
+       RowBox[{"(*", 
+        RowBox[{"Tex", " ", "beginnen"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"getKopf", "[", 
          RowBox[{
-          RowBox[{
-          "SEMESTER", "<>", "\"\< \>\"", "<>", "dozent", "<>", "\"\< \>\"", 
-           " ", "<>", "veranstaltungsname", "<>", "\"\< Vorlesung \>\"", 
-           "<>", "\"\<.tex\>\""}], ",", " ", "TEXTERSATZ"}], "]"}]}], ";", 
+         "dozent", ",", " ", "ubungsleiter", ",", " ", "SEMESTER", ",", " ", 
+          "veranstaltungsname", ",", " ", 
+          RowBox[{"ToString", "[", 
+           RowBox[{
+           "verlinkungen", "\[LeftDoubleBracket]", "nummer", 
+            "\[RightDoubleBracket]"}], "]"}]}], " ", "]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"texstr", "=", 
-        RowBox[{"OpenWrite", "[", "texfile", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"schreibeKopf", "[", 
-        RowBox[{
-        "texstr", ",", " ", "dozent", ",", " ", "ubungsleiter", ",", " ", 
-         "SEMESTER", ",", " ", "veranstaltungsname", ",", " ", 
-         RowBox[{"ToString", "[", 
-          RowBox[{
-          "verlinkungen", "\[LeftDoubleBracket]", "nummer", 
-           "\[RightDoubleBracket]"}], "]"}]}], " ", "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", "\"\<\\maketitleV\>\""}], "]"}], ";", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", "\"\< \\maketitleV\>\""}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"(*", 
         RowBox[{"Jetzt", " ", "Auswertung"}], "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
-         RowBox[{"\"\<\\AnzahlStudentenAuswertung{\>\"", "<>", 
-          RowBox[{"ToString", "[", 
-           RowBox[{"Length", "[", 
-            RowBox[{
-            "aktuelledatenmenge", "\[LeftDoubleBracket]", "1", 
-             "\[RightDoubleBracket]"}], "]"}], "]"}], "<>", "\"\<}\>\""}]}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", "\"\<\\AnzahlStudentenAuswertung{\>\"", "<>", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"Length", "[", 
+           RowBox[{
+           "aktuelledatenmenge", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}], "]"}], "]"}], "<>", "\"\<}\>\""}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", 
          RowBox[{"MSDAuswertung", "[", 
-          RowBox[{"aktuelledatenmenge", ",", " ", "5"}], "]"}]}], "]"}], ";", 
+          RowBox[{"aktuelledatenmenge", ",", " ", "5"}], "]"}]}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", 
          RowBox[{"Kreuzauswertung", "[", 
-          RowBox[{"aktuelledatenmenge", ",", " ", "6"}], "]"}]}], "]"}], ";", 
+          RowBox[{"aktuelledatenmenge", ",", " ", "6"}], "]"}]}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", 
          RowBox[{"MSDAuswertung", "[", 
-          RowBox[{"aktuelledatenmenge", ",", " ", "7"}], "]"}]}], "]"}], ";", 
+          RowBox[{"aktuelledatenmenge", ",", " ", "7"}], "]"}]}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", 
          RowBox[{"MSDAuswertung", "[", 
-          RowBox[{"aktuelledatenmenge", ",", " ", "8"}], "]"}]}], "]"}], ";", 
+          RowBox[{"aktuelledatenmenge", ",", " ", "8"}], "]"}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"Do", "[", 
         RowBox[{
-         RowBox[{"WriteString", "[", 
-          RowBox[{"texstr", ",", " ", 
+         RowBox[{"ret", "=", 
+          RowBox[{"ret", "<>", " ", 
            RowBox[{"Kreuzauswertung", "[", 
-            RowBox[{"aktuelledatenmenge", ",", "i"}], "]"}]}], "]"}], ",", 
+            RowBox[{"aktuelledatenmenge", ",", "i"}], "]"}]}]}], ",", 
          RowBox[{"{", 
           RowBox[{"i", ",", "9", ",", "30"}], "}"}]}], "]"}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"(*", "Freitextantworten", "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
+       RowBox[{"ret", "=", 
         RowBox[{
-        "texstr", ",", "\"\<\[Backslash]begin{freitextantworten}\>\""}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Do", "[", 
-         RowBox[{
-          RowBox[{"WriteString", "[", 
-           RowBox[{"texstr", ",", " ", 
-            RowBox[{"\"\<\\InputIfFileExists{freitextantworten/V\>\"", "<>", 
-             RowBox[{"ToString", "[", "i", "]"}], "<>", 
-             "\"\<.tex}{}{}\>\""}]}], "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{
-            "verlinkungen", "\[LeftDoubleBracket]", "nummer", 
-             "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"WriteString", "[", 
-         RowBox[{"texstr", ",", "\"\<\\end{freitextantworten} \>\""}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"Dokument", " ", "beenden"}], ",", " ", 
-         RowBox[{"Datei", " ", "schlie\[SZ]en"}]}], "*)"}], 
+        "ret", "<>", "\"\<\[Backslash]begin{freitextantworten}\>\""}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", "\"\<\\end{multicols}\\end{document}\>\""}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Close", "[", "texstr", "]"}], ";", "\[IndentingNewLine]", 
-       "texfile"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+       RowBox[{"Do", "[", 
+        RowBox[{
+         RowBox[{"ret", "=", 
+          RowBox[{
+          "ret", "<>", " ", "\"\<\\InputIfFileExists{freitextantworten/V\>\"",
+            "<>", 
+           RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.tex}{}{}\>\""}]}],
+          ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{
+           "verlinkungen", "\[LeftDoubleBracket]", "nummer", 
+            "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", "\"\<\\end{freitextantworten} \>\""}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "ret", "]"}], ";"}]}], "\[IndentingNewLine]", 
+     "]"}]}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"einzelneUbungAuswerten", "[", "ULEnummer_", "]"}], ":=", 
+    RowBox[{"getTexfileU", "[", "ULEnummer_", "]"}], ":=", 
     RowBox[{"Module", "[", 
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"(*", 
-       RowBox[{
-       "Datenliste", " ", "f\[UDoubleDot]r", " ", "diese", " ", "Vorlesung", 
-        " ", "erstellen"}], "*)"}], "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"aktuelledatenmenge", " ", "=", 
-        RowBox[{"Transpose", "@", 
-         RowBox[{"Select", "[", 
-          RowBox[{"daten", ",", " ", 
-           RowBox[{
-            RowBox[{
-             RowBox[{
-             "#", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
-             "\[Equal]", 
-             RowBox[{"ToString", "[", "ULEnummer", "]"}]}], "&"}]}], 
-          "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"Tex", " ", "beginnen"}], "*)"}], "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"{", 
          RowBox[{
@@ -790,73 +685,120 @@ Cell[BoxData[
          RowBox[{"1", ",", 
           RowBox[{"2", ";;", "4"}]}], "\[RightDoubleBracket]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"texfile", "=", 
-        RowBox[{"StringReplace", "[", 
-         RowBox[{
-          RowBox[{
-          "SEMESTER", "<>", "\"\< \>\"", "<>", "dozent", "<>", "\"\< \>\"", 
-           " ", "<>", "veranstaltungsname", "<>", "\"\< \>\"", "<>", 
-           "ubungsleiter", "<>", "\"\< Ubung \>\"", "<>", "\"\<.tex\>\""}], 
-          ",", " ", "TEXTERSATZ"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"texstr", "=", 
-        RowBox[{"OpenWrite", "[", "texfile", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"schreibeKopf", "[", 
+       RowBox[{"StringReplace", "[", 
         RowBox[{
-        "texstr", ",", " ", "dozent", ",", " ", "ubungsleiter", ",", " ", 
-         "SEMESTER", ",", " ", "veranstaltungsname", ",", " ", "ULEnummer"}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", "\"\<\\maketitleU\>\""}], "]"}], ";", 
+         RowBox[{
+         "SEMESTER", "<>", "\"\< \>\"", "<>", "dozent", "<>", "\"\< \>\"", 
+          " ", "<>", "veranstaltungsname", "<>", "\"\< \>\"", "<>", 
+          "ubungsleiter", "<>", "\"\< Ubung\>\"", "<>", "\"\<.tex\>\""}], ",",
+          " ", "TEXTERSATZ"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Ubungvorhanden", "[", "ULEnummer_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Select", "[", 
+         RowBox[{"veranstaltungen", ",", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "\[Equal]", "ULEnummer"}], "&"}]}], "]"}], "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], "\[NotEqual]", 
+       "\"\<\>\""}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"getAuswertungU", "[", "ULEnummer_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"ret", "=", "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Datenliste", " ", "f\[UDoubleDot]r", " ", "diese", " ", "Vorlesung", 
+        " ", "erstellen"}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"aktuelledatenmenge", " ", "=", 
+        RowBox[{"Transpose", "@", 
+         RowBox[{"Select", "[", 
+          RowBox[{"daten", ",", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
+             "\[Equal]", 
+             RowBox[{"ToString", "[", "ULEnummer", "]"}]}], "&"}]}], 
+          "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "dozent", ",", " ", "ubungsleiter", ",", " ", "veranstaltungsname"}],
+          "}"}], "=", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{"veranstaltungen", ",", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             "\[Equal]", "ULEnummer"}], "&"}]}], "]"}], 
+         "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", 
+          RowBox[{"2", ";;", "4"}]}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{"Tex", " ", "beginnen"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"getKopf", "[", 
+         RowBox[{
+         "dozent", ",", " ", "ubungsleiter", ",", " ", "SEMESTER", ",", " ", 
+          "veranstaltungsname", ",", " ", 
+          RowBox[{"ToString", "[", "ULEnummer", "]"}]}], " ", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", "\"\< \\maketitleU\>\""}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"(*", 
         RowBox[{"Jetzt", " ", "Auswertung"}], "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
-         RowBox[{"\"\<\\AnzahlStudentenAuswertung{\>\"", "<>", 
-          RowBox[{"ToString", "[", 
-           RowBox[{"Length", "[", 
-            RowBox[{
-            "aktuelledatenmenge", "\[LeftDoubleBracket]", "1", 
-             "\[RightDoubleBracket]"}], "]"}], "]"}], "<>", "\"\<}\>\""}]}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", "\"\<\\AnzahlStudentenAuswertung{\>\"", "<>", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"Length", "[", 
+           RowBox[{
+           "aktuelledatenmenge", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}], "]"}], "]"}], "<>", "\"\<}\>\""}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", " ", 
          RowBox[{"MSDAuswertung", "[", 
-          RowBox[{"aktuelledatenmenge", ",", " ", "5"}], "]"}]}], "]"}], ";", 
+          RowBox[{"aktuelledatenmenge", ",", " ", "5"}], "]"}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"Do", "[", 
         RowBox[{
-         RowBox[{"WriteString", "[", 
-          RowBox[{"texstr", ",", " ", 
+         RowBox[{"ret", "=", 
+          RowBox[{"ret", "<>", " ", 
            RowBox[{"Kreuzauswertung", "[", 
-            RowBox[{"aktuelledatenmenge", ",", "i"}], "]"}]}], "]"}], ",", 
+            RowBox[{"aktuelledatenmenge", ",", "i"}], "]"}]}]}], ",", 
          RowBox[{"{", 
           RowBox[{"i", ",", "31", ",", "56"}], "}"}]}], "]"}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"(*", "Freitextantworten", "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
+       RowBox[{"ret", "=", 
         RowBox[{
-        "texstr", ",", "\"\<\[Backslash]begin{freitextantworten}\>\""}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", " ", 
-         RowBox[{"\"\<\\InputIfFileExists{freitextantworten/U\>\"", "<>", 
-          RowBox[{"ToString", "[", "ULEnummer", "]"}], "<>", 
-          "\"\<.tex}{}{}\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", "\"\<\\end{freitextantworten} \>\""}], "]"}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"Dokument", " ", "beenden"}], ",", " ", 
-         RowBox[{"Datei", " ", "schlie\[SZ]en"}]}], "*)"}], 
+        "ret", "<>", "\"\<\[Backslash]begin{freitextantworten}\>\""}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"WriteString", "[", 
-        RowBox[{"texstr", ",", "\"\<\\end{multicols}\\end{document}\>\""}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Close", "[", "texstr", "]"}], ";", "\[IndentingNewLine]", 
-       "texfile"}]}], "\[IndentingNewLine]", "]"}]}]}]}]], "Input",
+       RowBox[{"ret", "=", 
+        RowBox[{
+        "ret", "<>", " ", "\"\<\\InputIfFileExists{freitextantworten/U\>\"", "<>", 
+         RowBox[{"ToString", "[", "ULEnummer", "]"}], "<>", 
+         "\"\<.tex}{}{}\>\""}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ret", "=", 
+        RowBox[{"ret", "<>", "\"\<\\end{freitextantworten} \>\""}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "ret", "]"}], ";"}]}], "\[IndentingNewLine]", 
+     "]"}]}]}]}]], "Input",
  CellChangeTimes->{{3.4584809875905046`*^9, 3.4584810046998796`*^9}, {
    3.4584810507467546`*^9, 3.4584812425905046`*^9}, {3.4584812997311296`*^9, 
    3.4584813017155046`*^9}, {3.4584813442155046`*^9, 
@@ -873,129 +815,169 @@ Cell[BoxData[
    3.4586413699375*^9, 3.4586413825625*^9}, {3.458641992375*^9, 
    3.45864201240625*^9}, {3.458642061578125*^9, 3.458642069609375*^9}, {
    3.461600844578125*^9, 3.461600845125*^9}, {3.46160113875*^9, 
-   3.46160114140625*^9}, {3.461601294671875*^9, 3.46160131096875*^9}},
+   3.46160114140625*^9}, {3.461601294671875*^9, 3.46160131096875*^9}, {
+   3.461602231984375*^9, 3.461602257953125*^9}, {3.461602358*^9, 
+   3.461602492921875*^9}, 3.461602551890625*^9, {3.46160259828125*^9, 
+   3.4616026070625*^9}, 3.461602657*^9, {3.461603001890625*^9, 
+   3.461603161640625*^9}, {3.461676401109375*^9, 3.46167649834375*^9}, {
+   3.461676563375*^9, 3.461676574375*^9}, {3.461676611453125*^9, 
+   3.461676627234375*^9}, {3.461676675*^9, 3.461676683390625*^9}, {
+   3.461676961203125*^9, 3.461676970609375*^9}, {3.461680127109375*^9, 
+   3.46168016771875*^9}, {3.461680531828125*^9, 3.46168054684375*^9}, 
+   3.46168096621875*^9},
  EmphasizeSyntaxErrors->True],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
+ RowBox[{"Ubungvorhanden", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.4617497936875*^9, 3.461749798515625*^9}, 
+   3.633697403340835*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{
+  3.46174979890625*^9, {3.633697400657132*^9, 3.6336974035883923`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
  RowBox[{
-  RowBox[{"(*", "test", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Funktionen", " ", "zum", " ", "Hier", " ", "benutzen"}], "*)"}], 
+  "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"VorlesungAuswerten", "[", "1", "]"}], "\[IndentingNewLine]", 
-   RowBox[{"AbsoluteTiming", "@", 
-    RowBox[{"Run", "[", 
-     RowBox[{"\"\<pdflatex \>\"", "<>", "%"}], "]"}]}]}]}]], "Input",
- CellChangeTimes->{{3.4586417623125*^9, 3.458641780171875*^9}, {
-   3.458642250078125*^9, 3.458642250515625*^9}, {3.461503933546875*^9, 
-   3.46150393365625*^9}, {3.46150741928125*^9, 3.461507419359375*^9}, {
-   3.461507489109375*^9, 3.4615075173125*^9}, {3.46150768915625*^9, 
-   3.46150768965625*^9}, {3.4615077304375*^9, 3.46150774253125*^9}, {
-   3.46151488803125*^9, 3.46151488828125*^9}, {3.4615159299375*^9, 
-   3.46151593096875*^9}, {3.4615163194375*^9, 3.461516319765625*^9}, {
-   3.461517801671875*^9, 3.461517801765625*^9}, 3.46160153021875*^9, 
-   3.6336964782129307`*^9}],
-
-Cell[BoxData["\<\"SS2009_MacGyver_Atombomben_mit_dem_Taschenmesser_III_\
-Vorlesung_.tex\"\>"], "Output",
- CellChangeTimes->{{3.45864177309375*^9, 3.458641781140625*^9}, 
-   3.458642251578125*^9, 3.459259200339875*^9, 3.45925957426175*^9, 
-   3.461503934375*^9, 3.461504119328125*^9, 3.461505603203125*^9, 
-   3.46150742278125*^9, {3.4615074901875*^9, 3.461507518953125*^9}, 
-   3.461507690578125*^9, {3.461507730859375*^9, 3.461507742953125*^9}, 
-   3.461514889890625*^9, 3.461515058234375*^9, 3.46151593165625*^9, 
-   3.461516320703125*^9, 3.461517802734375*^9, 3.461601442609375*^9, 
-   3.46160153103125*^9, 3.461601613578125*^9, {3.633696460307406*^9, 
-   3.6336964790687*^9}, 3.6336969387906113`*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "1.86005500000000001392663762089796364307`6.290125699348807", ",", "0"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.45864177309375*^9, 3.458641781140625*^9}, 
-   3.458642251578125*^9, 3.459259200339875*^9, 3.45925957426175*^9, 
-   3.461503934375*^9, 3.461504119328125*^9, 3.461505603203125*^9, 
-   3.46150742278125*^9, {3.4615074901875*^9, 3.461507518953125*^9}, 
-   3.461507690578125*^9, {3.461507730859375*^9, 3.461507742953125*^9}, 
-   3.461514889890625*^9, 3.461515058234375*^9, 3.46151593165625*^9, 
-   3.461516320703125*^9, 3.461517802734375*^9, 3.461601442609375*^9, 
-   3.46160153103125*^9, 3.461601613578125*^9, {3.633696460307406*^9, 
-   3.6336964790687*^9}, 3.633696940651332*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"einzelneUbungAuswerten", "[", "1", "]"}], "\[IndentingNewLine]", 
- RowBox[{"AbsoluteTiming", "@", 
-  RowBox[{"Run", "[", 
-   RowBox[{"\"\<pdflatex \>\"", "<>", "%"}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.4586416818125*^9, 3.4586417250625*^9}, {
-   3.458642326984375*^9, 3.4586423293125*^9}, {3.461507595390625*^9, 
-   3.46150760715625*^9}, {3.461513302546875*^9, 3.461513302578125*^9}, 
-   3.6336965162687397`*^9, {3.633696639533618*^9, 3.633696696869446*^9}}],
-
-Cell[BoxData["\<\"SS2009_MacGyver_Atombomben_mit_dem_Taschenmesser_III_Chuck_\
-Norris_Ubung_.tex\"\>"], "Output",
- CellChangeTimes->{{3.4586416898125*^9, 3.45864172565625*^9}, 
-   3.458642330453125*^9, {3.4586431535625*^9, 3.458643158359375*^9}, {
-   3.4615075958125*^9, 3.461507607578125*^9}, 3.46151330828125*^9, 
-   3.461513560296875*^9, {3.461517845546875*^9, 3.461517859828125*^9}, 
-   3.461601322171875*^9, 3.4616013999375*^9, {3.633696636514113*^9, 
-   3.633696697581213*^9}, 3.633696940831668*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-  "1.85684000000000004604316927725449204445`6.289374396388927", ",", "0"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.4586416898125*^9, 3.45864172565625*^9}, 
-   3.458642330453125*^9, {3.4586431535625*^9, 3.458643158359375*^9}, {
-   3.4615075958125*^9, 3.461507607578125*^9}, 3.46151330828125*^9, 
-   3.461513560296875*^9, {3.461517845546875*^9, 3.461517859828125*^9}, 
-   3.461601322171875*^9, 3.4616013999375*^9, {3.633696636514113*^9, 
-   3.633696697581213*^9}, 3.633696942689485*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"AbsoluteTiming", "@", 
-  RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Table", "[", 
-     RowBox[{
-      RowBox[{"Run", "[", 
-       RowBox[{"\"\<pdflatex \>\"", "<>", 
-        RowBox[{"VorlesungAuswerten", "[", "n", "]"}]}], "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"n", ",", "1", ",", 
-        RowBox[{"Length", "@", "verlinkungen"}]}], "}"}]}], "]"}], 
-    "\[IndentingNewLine]", ",", " ", "n"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.4584820258717546`*^9, 3.4584820299967546`*^9}, {
-  3.45864125590625*^9, 3.458641284796875*^9}, {3.4586414458125*^9, 
-  3.458641487671875*^9}, {3.458641613875*^9, 3.458641623484375*^9}, {
-  3.458643358265625*^9, 3.458643413828125*^9}}],
+    RowBox[{"VAuswerten", "[", "nummer_", "]"}], ":=", 
+    RowBox[{"AbsoluteTiming", "[", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"stream", ",", " ", "texfile"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"texfile", "=", 
+         RowBox[{"getTexfileV", "[", "nummer", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"stream", "=", 
+         RowBox[{"OpenWrite", "[", 
+          RowBox[{"texfile", ",", 
+           RowBox[{"CharacterEncoding", "\[Rule]", "\"\<ISO8859-1\>\""}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"WriteString", "[", 
+         RowBox[{"stream", ",", "dateibeginn"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"WriteString", "[", 
+         RowBox[{"stream", ",", 
+          RowBox[{"getAuswertungV", "[", "nummer", "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"WriteString", "[", 
+         RowBox[{"stream", ",", "dateiende"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Close", "[", "stream", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Run", "[", 
+           RowBox[{"\"\<pdflatex \>\"", "<>", "texfile"}], "]"}], ",", 
+          "texfile"}], "}"}]}]}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"UAuswerten", "[", "ULEnummer_", "]"}], ":=", 
+    RowBox[{"AbsoluteTiming", "[", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"stream", ",", " ", "texfile"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Ubungvorhanden", "[", "ULEnummer", "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"texfile", "=", 
+           RowBox[{"getTexfileU", "[", "ULEnummer", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"stream", "=", 
+           RowBox[{"OpenWrite", "[", 
+            RowBox[{"texfile", ",", 
+             RowBox[{"CharacterEncoding", "\[Rule]", "\"\<ISO8859-1\>\""}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"WriteString", "[", 
+           RowBox[{"stream", ",", "dateibeginn"}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"WriteString", "[", 
+           RowBox[{"stream", ",", 
+            RowBox[{"getAuswertungU", "[", "ULEnummer", "]"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"WriteString", "[", 
+           RowBox[{"stream", ",", "dateiende"}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Close", "[", "stream", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Run", "[", 
+             RowBox[{"\"\<pdflatex \>\"", "<>", "texfile"}], "]"}], ",", 
+            "texfile"}], "}"}]}], "\[IndentingNewLine]", ",", "\"\<\>\""}], 
+        "]"}]}], "\[IndentingNewLine]", "]"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.461676898203125*^9, 3.4616769084375*^9}, {
+   3.4616769794375*^9, 3.461677207484375*^9}, {3.461677269890625*^9, 
+   3.461677275640625*^9}, {3.4616773514375*^9, 3.461677352625*^9}, {
+   3.461677389890625*^9, 3.46167744809375*^9}, {3.46167758425*^9, 
+   3.4616775936875*^9}, {3.461680235421875*^9, 3.46168030834375*^9}, 
+   3.461680372734375*^9, {3.461680419078125*^9, 3.46168042384375*^9}, {
+   3.461680983640625*^9, 3.461680991203125*^9}, {3.461681038609375*^9, 
+   3.461681040328125*^9}, {3.4648625986875*^9, 3.464862606203125*^9}, {
+   3.4648646065*^9, 3.464864617984375*^9}, {3.46584611646875*^9, 
+   3.465846119984375*^9}, {3.46584622390625*^9, 3.4658462580625*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VAuswerten", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.46167721046875*^9, 3.46167722075*^9}, {
+   3.461677286640625*^9, 3.46167729828125*^9}, 3.46167961025*^9, {
+   3.465846132*^9, 3.465846132515625*^9}, 3.466148457859375*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"187.453125`9.724437678365272", ",", 
+  RowBox[{"1.6592899999999999316457888198783621192`6.240522209125051", ",", 
    RowBox[{"{", 
     RowBox[{
-    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
-      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
-     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{3.45864361628125*^9}]
+    "0", ",", \
+"\<\"SS2009_MacGyver_Atombomben_mit_dem_Taschenmesser_III_Vorlesung.tex\"\>"}]\
+, "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.461677226015625*^9, {3.461677279703125*^9, 3.461677303359375*^9}, 
+   3.4616773728125*^9, 3.461677406265625*^9, 3.46167961365625*^9, 
+   3.461746509875*^9, {3.465846134234375*^9, 3.465846152796875*^9}, 
+   3.46584623265625*^9, 3.465846265328125*^9, 3.46614846153125*^9, 
+   3.6336974105799303`*^9}]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UAuswerten", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.461677452078125*^9, 3.461677457296875*^9}, {
+   3.46168032353125*^9, 3.4616803325*^9}, {3.46168185346875*^9, 
+   3.461681854609375*^9}, {3.466147970484375*^9, 3.46614797109375*^9}, {
+   3.466148089921875*^9, 3.4661480900625*^9}, 3.466148480203125*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1.69971399999999994712140960473334416747`6.250975764851369", ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "0", ",", \
+"\<\"SS2009_MacGyver_Atombomben_mit_dem_Taschenmesser_III_Chuck_Norris_Ubung.\
+tex\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.461677460828125*^9, {3.461680328328125*^9, 3.4616803328125*^9}, {
+   3.46168037534375*^9, 3.46168037853125*^9}, 3.4616804270625*^9, {
+   3.46168102796875*^9, 3.4616810429375*^9}, {3.461681869984375*^9, 
+   3.461681879640625*^9}, 3.4648650149375*^9, 3.466147983375*^9, 
+   3.466148095203125*^9, 3.4661484845*^9, 3.6336974150029383`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"AbsoluteTiming", "@", 
@@ -1003,16 +985,381 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Table", "[", 
      RowBox[{
-      RowBox[{"Run", "[", 
-       RowBox[{"\"\<pdflatex \>\"", "<>", 
-        RowBox[{"einzelneUbungAuswerten", "[", "n", "]"}]}], "]"}], ",", 
+      RowBox[{"VA", "[", "nummer", "]"}], ",", " ", 
       RowBox[{"{", 
-       RowBox[{"n", ",", "1", ",", "76"}], "}"}]}], "]"}], 
-    "\[IndentingNewLine]", ",", " ", "n"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.458643722640625*^9, 3.45864372734375*^9}}]
+       RowBox[{"nummer", ",", " ", 
+        RowBox[{"Length", "@", "verlinkungen"}]}], "}"}]}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"nummer", ",", " ", 
+      RowBox[{"Length", "@", "verlinkungen"}], ",", " ", 
+      RowBox[{"getTexfileV", "[", "nummer", "]"}]}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{3.464886181515625*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.3508589999999999764490610232314793393`5.565732534518424", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"VA", "[", "1", "]"}], ",", 
+     RowBox[{"VA", "[", "2", "]"}], ",", 
+     RowBox[{"VA", "[", "3", "]"}], ",", 
+     RowBox[{"VA", "[", "4", "]"}], ",", 
+     RowBox[{"VA", "[", "5", "]"}], ",", 
+     RowBox[{"VA", "[", "6", "]"}], ",", 
+     RowBox[{"VA", "[", "7", "]"}], ",", 
+     RowBox[{"VA", "[", "8", "]"}], ",", 
+     RowBox[{"VA", "[", "9", "]"}], ",", 
+     RowBox[{"VA", "[", "10", "]"}], ",", 
+     RowBox[{"VA", "[", "11", "]"}], ",", 
+     RowBox[{"VA", "[", "12", "]"}], ",", 
+     RowBox[{"VA", "[", "13", "]"}], ",", 
+     RowBox[{"VA", "[", "14", "]"}], ",", 
+     RowBox[{"VA", "[", "15", "]"}], ",", 
+     RowBox[{"VA", "[", "16", "]"}], ",", 
+     RowBox[{"VA", "[", "17", "]"}], ",", 
+     RowBox[{"VA", "[", "18", "]"}], ",", 
+     RowBox[{"VA", "[", "19", "]"}], ",", 
+     RowBox[{"VA", "[", "20", "]"}], ",", 
+     RowBox[{"VA", "[", "21", "]"}], ",", 
+     RowBox[{"VA", "[", "22", "]"}], ",", 
+     RowBox[{"VA", "[", "23", "]"}], ",", 
+     RowBox[{"VA", "[", "24", "]"}], ",", 
+     RowBox[{"VA", "[", "25", "]"}], ",", 
+     RowBox[{"VA", "[", "26", "]"}], ",", 
+     RowBox[{"VA", "[", "27", "]"}], ",", 
+     RowBox[{"VA", "[", "28", "]"}], ",", 
+     RowBox[{"VA", "[", "29", "]"}], ",", 
+     RowBox[{"VA", "[", "30", "]"}], ",", 
+     RowBox[{"VA", "[", "31", "]"}], ",", 
+     RowBox[{"VA", "[", "32", "]"}], ",", 
+     RowBox[{"VA", "[", "33", "]"}], ",", 
+     RowBox[{"VA", "[", "34", "]"}], ",", 
+     RowBox[{"VA", "[", "35", "]"}], ",", 
+     RowBox[{"VA", "[", "36", "]"}], ",", 
+     RowBox[{"VA", "[", "37", "]"}], ",", 
+     RowBox[{"VA", "[", "38", "]"}], ",", 
+     RowBox[{"VA", "[", "39", "]"}], ",", 
+     RowBox[{"VA", "[", "40", "]"}], ",", 
+     RowBox[{"VA", "[", "41", "]"}], ",", 
+     RowBox[{"VA", "[", "42", "]"}], ",", 
+     RowBox[{"VA", "[", "43", "]"}], ",", 
+     RowBox[{"VA", "[", "44", "]"}], ",", 
+     RowBox[{"VA", "[", "45", "]"}], ",", 
+     RowBox[{"VA", "[", "46", "]"}], ",", 
+     RowBox[{"VA", "[", "47", "]"}], ",", 
+     RowBox[{"VA", "[", "48", "]"}], ",", 
+     RowBox[{"VA", "[", "49", "]"}], ",", 
+     RowBox[{"VA", "[", "50", "]"}], ",", 
+     RowBox[{"VA", "[", "51", "]"}], ",", 
+     RowBox[{"VA", "[", "52", "]"}], ",", 
+     RowBox[{"VA", "[", "53", "]"}], ",", 
+     RowBox[{"VA", "[", "54", "]"}], ",", 
+     RowBox[{"VA", "[", "55", "]"}], ",", 
+     RowBox[{"VA", "[", "56", "]"}], ",", 
+     RowBox[{"VA", "[", "57", "]"}], ",", 
+     RowBox[{"VA", "[", "58", "]"}], ",", 
+     RowBox[{"VA", "[", "59", "]"}], ",", 
+     RowBox[{"VA", "[", "60", "]"}], ",", 
+     RowBox[{"VA", "[", "61", "]"}], ",", 
+     RowBox[{"VA", "[", "62", "]"}], ",", 
+     RowBox[{"VA", "[", "63", "]"}], ",", 
+     RowBox[{"VA", "[", "64", "]"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.464886182578125*^9, 3.633697474063085*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Alle", " ", "Vorlesungen"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"AbsoluteTiming", "@", 
+   RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"VAuswerten", "[", "nummer", "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"nummer", ",", " ", 
+         RowBox[{"Length", "@", "verlinkungen"}]}], "}"}]}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"nummer", ",", " ", 
+       RowBox[{"Length", "@", "verlinkungen"}], ",", " ", 
+       RowBox[{"getTexfileV", "[", "nummer", "]"}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.461746526453125*^9, 3.461746562984375*^9}, {
+   3.461748521*^9, 3.46174858746875*^9}, {3.46174953503125*^9, 
+   3.461749538171875*^9}, {3.46486224459375*^9, 3.464862251359375*^9}, {
+   3.464862620359375*^9, 3.464862620796875*^9}, {3.464862705265625*^9, 
+   3.46486270859375*^9}, 3.46486427165625*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"alle", " ", 
+    RowBox[{"mit", " ", ":", " ", "nachmachen"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"AbsoluteTiming", "@", 
+    RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringPosition", "[", 
+            RowBox[{
+             RowBox[{"getTexfileV", "[", "nummer", "]"}], ",", "\"\<:\>\""}], 
+            "]"}], "\[NotEqual]", 
+           RowBox[{"{", "}"}]}], ",", " ", "nummer", ",", " ", "\"\<\>\""}], 
+         "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"nummer", ",", " ", 
+          RowBox[{"Length", "@", "verlinkungen"}]}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"nummer", ",", " ", 
+        RowBox[{"Length", "@", "verlinkungen"}], ",", " ", 
+        RowBox[{"getTexfileV", "[", "nummer", "]"}]}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ULEnummern", "=", 
+     RowBox[{"Flatten", "@", "verlinkungen"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"AbsoluteTiming", "@", 
+    RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringPosition", "[", 
+            RowBox[{
+             RowBox[{"getTexfileU", "[", "ULEnummer", "]"}], ",", 
+             "\"\<:\>\""}], "]"}], "\[NotEqual]", 
+           RowBox[{"{", "}"}]}], ",", " ", "ULEnummer", ",", "\"\<\>\""}], 
+         "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"ULEnummer", ",", "ULEnummern"}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ULEnummer", ",", " ", 
+        RowBox[{"Length", "@", "verlinkungen"}], ",", " ", 
+        RowBox[{"getTexfileU", "[", "ULEnummer", "]"}]}], "}"}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.46488701875*^9, 3.46488705090625*^9}, {
+  3.4648871238125*^9, 3.4648871310625*^9}, {3.46488743053125*^9, 
+  3.464887607046875*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.296875`6.924118620464912", ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.46488751425*^9, 3.464887528046875*^9}, {3.4648876085*^9,
+    3.464887621640625*^9}, 3.46584639571875*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.09375`6.423516269895729", ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.46488751425*^9, 3.464887528046875*^9}, {3.4648876085*^9,
+    3.464887621640625*^9}, 3.465846395859375*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Alle", " ", "\[CapitalUDoubleDot]bungen"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ULEnummern", "=", 
+     RowBox[{"Flatten", "@", "verlinkungen"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"AbsoluteTiming", "@", 
+    RowBox[{"Monitor", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"UAuswerten", "[", "ULEnummer", "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"ULEnummer", ",", "ULEnummern"}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"ULEnummer", ",", " ", 
+        RowBox[{"Length", "@", "verlinkungen"}], ",", " ", 
+        RowBox[{"getTexfileU", "[", "ULEnummer", "]"}]}], "}"}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.461748640609375*^9, 3.46174864096875*^9}, {
+   3.46174868540625*^9, 3.46174872796875*^9}, 3.461749011125*^9, {
+   3.461749541296875*^9, 3.461749543046875*^9}, {3.464864662984375*^9, 
+   3.464864666390625*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Erzeugt", " ", "ein", " ", "pdf", " ", "mit", " ", "allen", " ", 
+    RowBox[{"Evals", ":"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"AbsoluteTiming", "[", 
+    RowBox[{
+     RowBox[{"stream", "=", 
+      RowBox[{"OpenWrite", "[", 
+       RowBox[{
+        RowBox[{
+        "\"\<Gesamteval_\>\"", "<>", "SEMESTER", "<>", "\"\<.tex\>\""}], ",", 
+        RowBox[{"CharacterEncoding", "\[Rule]", "\"\<ISO8859-1\>\""}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"stream", ",", " ", "dateibeginn"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"stream", ",", " ", 
+       RowBox[{
+       "\"\<\[Backslash]input{GesamtDeckblatt.tex}\[Backslash]macheDeckblatt{\
+\>\"", "<>", "SEMESTER", "<>", "\"\<}\>\""}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"WriteString", "[", 
+         RowBox[{"stream", ",", 
+          RowBox[{"getAuswertungV", "[", "nummer", "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Do", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"WriteString", "[", 
+            RowBox[{"stream", ",", " ", "nochneEval"}], "]"}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"Ubungvorhanden", "[", "ULEnummer", "]"}], ",", 
+             RowBox[{"WriteString", "[", 
+              RowBox[{"stream", ",", " ", 
+               RowBox[{"getAuswertungU", "[", "ULEnummer", "]"}]}], "]"}]}], 
+            "]"}], ";"}], "\[IndentingNewLine]", ",", 
+          RowBox[{"{", 
+           RowBox[{"ULEnummer", ",", " ", 
+            RowBox[{
+            "verlinkungen", "\[LeftDoubleBracket]", "nummer", 
+             "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"WriteString", "[", 
+         RowBox[{"stream", ",", "nochneEval"}], "]"}], ";"}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"nummer", ",", 
+         RowBox[{"Length", "@", "verlinkungen"}]}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"stream", ",", "dateiende"}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Close", "[", "stream", "]"}], ";"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"AbsoluteTiming", "[", 
+    RowBox[{"Run", "[", 
+     RowBox[{
+     "\"\<pdflatex -buf-size=1000000 Gesamteval_\>\"", "<>", "SEMESTER", 
+      "<>", "\"\<.tex\>\""}], "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.461677596421875*^9, 3.46167768571875*^9}, {
+   3.46167773084375*^9, 3.46167777015625*^9}, {3.461677893515625*^9, 
+   3.4616779061875*^9}, {3.461677949359375*^9, 3.4616780631875*^9}, 
+   3.46167810075*^9, {3.461679256125*^9, 3.461679261890625*^9}, {
+   3.461679363171875*^9, 3.461679396328125*^9}, {3.461680469296875*^9, 
+   3.4616804954375*^9}, {3.46168100765625*^9, 3.46168102134375*^9}, {
+   3.4616810540625*^9, 3.46168110146875*^9}, {3.4616811893125*^9, 
+   3.4616812268125*^9}, 3.461681475671875*^9, {3.461681659640625*^9, 
+   3.461681665375*^9}, {3.461749566296875*^9, 3.461749578578125*^9}, {
+   3.46174994340625*^9, 3.46174996103125*^9}, {3.463139017203125*^9, 
+   3.46313903703125*^9}, 3.466965383515625*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4.15625`8.070246656143153", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{{3.461678029265625*^9, 3.46167806603125*^9}, 
+   3.461678101609375*^9, 3.461679165671875*^9, 3.461679228109375*^9, 
+   3.4616793220625*^9, 3.46167936575*^9, 3.461679399578125*^9, {
+   3.461681106734375*^9, 3.46168113315625*^9}, {3.461681220828125*^9, 
+   3.4616812318125*^9}, 3.461681432671875*^9, 3.46168147646875*^9, 
+   3.461681560203125*^9, 3.46168167421875*^9, 3.46168204453125*^9, 
+   3.461749591984375*^9, 3.461749985890625*^9, 3.462349916828125*^9, 
+   3.462349988921875*^9, 3.46313767084375*^9, 3.46313906515625*^9, 
+   3.46313920278125*^9, 3.463139245078125*^9, 3.463636427828125*^9, 
+   3.463641916*^9, 3.46389725325*^9, 3.46389732046875*^9, 
+   3.463898184390625*^9, 3.46486156778125*^9, 3.464861624421875*^9, 
+   3.46486175121875*^9, 3.46486180371875*^9, 3.4661644169375*^9, 
+   3.466965436453125*^9}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{{3.461678029265625*^9, 3.46167806603125*^9}, 
+   3.461678101609375*^9, 3.461679165671875*^9, 3.461679228109375*^9, 
+   3.4616793220625*^9, 3.46167936575*^9, 3.461679399578125*^9, {
+   3.461681106734375*^9, 3.46168113315625*^9}, {3.461681220828125*^9, 
+   3.4616812318125*^9}, 3.461681432671875*^9, 3.46168147646875*^9, 
+   3.461681560203125*^9, 3.46168167421875*^9, 3.46168204453125*^9, 
+   3.461749591984375*^9, 3.461749985890625*^9, 3.462349916828125*^9, 
+   3.462349988921875*^9, 3.46313767084375*^9, 3.46313906515625*^9, 
+   3.46313920278125*^9, 3.463139245078125*^9, 3.463636427828125*^9, 
+   3.463641916*^9, 3.46389725325*^9, 3.46389732046875*^9, 
+   3.463898184390625*^9, 3.46486156778125*^9, 3.464861624421875*^9, 
+   3.46486175121875*^9, 3.46486180371875*^9, 3.4661644169375*^9, 
+   3.466965448078125*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Run", "[", 
+   RowBox[{
+   "\"\<pdflatex -buf-size=1000000 Gesamteval_\>\"", "<>", "SEMESTER", "<>", 
+    "\"\<.tex\>\""}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"90.203125`9.406766577010718", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.4677300635702763`*^9}]
+}, Open  ]]
 },
-WindowSize->{1136, 1019},
-WindowMargins->{{-9, Automatic}, {2, Automatic}},
+WindowSize->{960, 1040},
+WindowMargins->{{-9, Automatic}, {-9, Automatic}},
 PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (September 9, 2014)",
 StyleDefinitions->"Default.nb"
@@ -1029,52 +1376,51 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[567, 22, 6078, 144, 363, "Input"],
-Cell[6648, 168, 834, 13, 32, "Output"],
-Cell[7485, 183, 1592, 25, 77, "Output"],
-Cell[9080, 210, 782, 12, 32, "Output"],
-Cell[9865, 224, 1146, 23, 32, "Output"]
+Cell[567, 22, 6426, 149, 385, "Input"],
+Cell[6996, 173, 1288, 19, 32, "Output"],
+Cell[8287, 194, 2044, 31, 77, "Output"],
+Cell[10334, 227, 1234, 18, 32, "Output"],
+Cell[11571, 247, 1707, 31, 55, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11048, 252, 282, 5, 32, "Input"],
-Cell[11333, 259, 220, 3, 32, "Output"]
+Cell[13315, 283, 282, 5, 32, "Input"],
+Cell[13600, 290, 220, 3, 32, "Output"]
+}, Open  ]],
+Cell[13835, 296, 8975, 194, 539, "Input"],
+Cell[22813, 492, 14396, 335, 1353, "Input"],
+Cell[CellGroupData[{
+Cell[37234, 831, 157, 3, 32, "Input"],
+Cell[37394, 836, 123, 2, 32, "Output"]
+}, Open  ]],
+Cell[37532, 841, 3870, 87, 473, "Input"],
+Cell[CellGroupData[{
+Cell[41427, 932, 257, 4, 32, "Input"],
+Cell[41687, 938, 583, 13, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11590, 267, 8348, 180, 429, "Input"],
-Cell[19941, 449, 284, 7, 23, "Message"],
-Cell[20228, 458, 284, 7, 23, "Message"],
-Cell[20515, 467, 284, 7, 23, "Message"],
-Cell[20802, 476, 286, 7, 23, "Message"],
-Cell[21091, 485, 284, 7, 23, "Message"],
-Cell[21378, 494, 284, 7, 23, "Message"],
-Cell[21665, 503, 284, 7, 23, "Message"],
-Cell[21952, 512, 284, 7, 23, "Message"]
+Cell[42307, 956, 337, 5, 32, "Input"],
+Cell[42647, 963, 630, 13, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22273, 524, 840, 15, 77, "Input"],
-Cell[23116, 541, 927, 13, 32, "Output"],
-Cell[24046, 556, 971, 14, 32, "Output"]
+Cell[43314, 981, 573, 15, 77, "Input"],
+Cell[43890, 998, 2965, 69, 143, "Output"]
+}, Open  ]],
+Cell[46870, 1070, 978, 22, 99, "Input"],
+Cell[CellGroupData[{
+Cell[47873, 1096, 2131, 55, 209, "Input"],
+Cell[50007, 1153, 1456, 22, 55, "Output"],
+Cell[51466, 1177, 1660, 25, 55, "Output"]
+}, Open  ]],
+Cell[53141, 1205, 1025, 25, 121, "Input"],
+Cell[CellGroupData[{
+Cell[54191, 1234, 3423, 76, 363, "Input"],
+Cell[57617, 1312, 934, 15, 32, "Output"],
+Cell[58554, 1329, 869, 13, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25054, 575, 241, 5, 32, "Input"],
-Cell[25298, 582, 406, 8, 32, "Output"]
-}, Open  ]],
-Cell[25719, 593, 12703, 283, 1221, "Input"],
-Cell[CellGroupData[{
-Cell[38447, 880, 879, 16, 77, "Input"],
-Cell[39329, 898, 704, 10, 32, "Output"],
-Cell[40036, 910, 734, 13, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40807, 928, 490, 8, 55, "Input"],
-Cell[41300, 938, 505, 7, 32, "Output"],
-Cell[41808, 947, 528, 10, 32, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[42373, 962, 733, 16, 77, "Input"],
-Cell[43109, 980, 932, 16, 55, "Output"]
-}, Open  ]],
-Cell[44056, 999, 501, 12, 77, "Input"]
+Cell[59460, 1347, 205, 5, 32, "Input"],
+Cell[59668, 1354, 143, 3, 32, "Output"]
+}, Open  ]]
 }
 ]
 *)
